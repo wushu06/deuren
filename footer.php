@@ -74,5 +74,6 @@
 <a class="back-to-top">
     <i class="fa fa-angle-up" aria-hidden="true"></i>
 </a>
+</section>
 </body>
 </html>

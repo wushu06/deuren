@@ -62,7 +62,7 @@
 
 
 			<div class="small-6 medium-4 columns postfolio-item fs-slide">
-				<a href="/versare-natural-oak-case-study">
+				<a href="<?php the_permalink(); ?>">
 					<div class="fss-wrapper">
 						<div class="fs-image"><img src="<?php echo get_the_post_thumbnail_url(); ?>" ></div>
 							<div class="image-overlay">

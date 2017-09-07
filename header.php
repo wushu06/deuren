@@ -25,42 +25,24 @@
     <?php wp_head();?>
 
 </head>
-<body  <?php body_class('full-width none cms-index-index cms-home');?>>
+<?php $class="";
+  if(is_woocommerce()  ) {
+    $class = "";
+  }else {
+    $class = "home";
+  }
+ ?>
+<body  <?php body_class($class);?>>
 
 
 <header id="header">
-        <div class="topContainerLinks">
-              <div class="top-cart">
-                <div class="block-title no-items">
-                    <a id="cartHeader" href="#"><span class="title-cart"><b>Cart</b> <b>(</b><span>0<b> items</b></span><b>)</b></span></a>
-                </div>
-                <div id="topCartContent" class="block-content" style="display:none;">
-                    <div class="mobile-indent"></div>
-                    <div class="inner-wrapper">                           
-                     <p class="cart-empty">
-                            You have no items in your shopping cart.           
-                      </p>
-                    </div>
-                </div>
-               </div> 
-               <ul class="links">
-                    <li class="first" >
-                    <a href="http://www.deuren.co.uk/customer/account/" title="My Account" class="top-link-account">My Account</a>
-                    </li>
-                    <li >
-                    <a href="http://www.deuren.co.uk/checkout/" title="Checkout" class="top-link-checkout">Checkout</a>
-                    </li>
-                    <li class=" last" >
-                    <a href="http://www.deuren.co.uk/customer/account/login/" title="Log In" class="top-link-login">Log In</a>
-                    </li>
-                </ul>
-          </div>
-          <div class="clear"></div>
+     
+         
           <div class="logo-wrapper">
                            <h2 class="logo"><strong>Deuren</strong><a href="<?php echo site_url(); ?>" title="Deuren" class="logo"><img src="<?php echo get_template_directory_uri();  ?>/assets/images/default/Deuren-Logo.png" alt="Deuren" /></a></h2>
                         <p class="welcome-msg">Contemporary Internal &amp; External Doors</p>
            </div>
-    
+             
             <div class="menuWrapper">
         
             <div class="form-search">
@@ -72,85 +54,141 @@
             </div>
          
 
-            <nav class="nav-container">
-                <?php wp_nav_menu( array(
-                 'theme_location' => 'main_nav',
-                 'before' => '<span>', 
-                 'after' =>'</span>',  
-                 'menu_class' => 'nav-wide',
-                   'container' => 'ul', 
-                   'items_wrap'      => '<ul id="nav" class="nav-wide">%3$s</ul>' 
-                   ) ); 
+            <nav class="nav-container" id="firemenu">
+                <?php 
+                  wp_nav_menu( array(
+                        'menu'              => 'primary',
+                        'theme_location'    => 'primary',
+                        'depth'             => 3,
+                        'container'         => 'div',
+                        'container_class'   => 'collapse navbar-collapse',
+                        'container_id'      => 'main-menu',
+                        'menu_class'        => 'nav navbar-nav navbar-right',
+                        'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                        'walker'            => new wp_bootstrap_navwalker())
+                    );
+
+
+
+
                    ?>
+     <?php
+                   /* $term = get_queried_object();
+$list = wp_list_categories( array(
+    'orderby'  => 'name',
+    'taxonomy' => 'product_cat',
+    'parent'   => $term->term_id,
+    'title_li' => '',
+    'depth'    => 3,
+    'echo'     => false,
+));
+
+if ( $list ) {
+    echo "<ul><li>$list</li></ul>";
+} else {
+    // Nothing, do something else!
+}
+
+                     ?>
+
+                          
+                  <?php /* }
+                    if($category->parent == 29) { // grab the parent
+                               echo $category->name.'<br>';
+                                
+                            }
+                           // var_dump($category);
+
+                }
+                $categories=get_terms(
+                                    array( 'parent' => 29 )
+                                );
+                echo '<hr>Parent:';
+                     foreach( $categories as $category ) {
+                  
+                       echo $category->name.'<br>';
+                        
+                   
+                }
+               /* echo '<hr>Parent:';
+                     foreach( $categories as $category ) {
+                     if($category->parent == 30) { // grab the parent
+                        echo $category->name.'<br>';
+                        
+                    }
+                }
+                echo '<hr>Children:';
+                     foreach( $categories as $category ) {
+                      if($category->parent !== 29 && $category->parent !== 0 && $category->parent !== 30 ) { // grab the children
+                        echo '<strong>'.$category->name.'</strong><br>';
+                        
+                    }
+               
+                }*/
+
+
+
+?>
+
+ 
+
+             
+            
+
+
             </nav>
            
-            <div class="responsiveMenu">
+            <!--<div class="responsiveMenu">
                 <span class="screenHide menuText">Menu</span>
-                <div class="menu-button">
-
-                </div>
+                
             </div>
-        </div>
-          
+        </div>-->
+        
 
         <div class="clear"></div>
 
  </header>
-
-<div class="top-trigger" style="height:0;"></div>
-
-
-
-<!-- to  think about 
-
-<section class="home-projects">
-    <div class="row">
-        <div class="small-12 large-10 large-offset-1 columns">
-            <h2>Latest Projects &amp; News</h2>
-                        <div class="news-slider">
-                <div class="ns-slide">
-                    <a href="http://www.deuren.co.uk/projects-and-news/internal-doors-things-to-consider-when-building-or-renovating-a-house/">
-                        <div class="nss-inner">
-                            <div class="image-holder">
-                                <img src="<?php echo get_template_directory_uri();  ?>/assets/images/Deuren-Case-Study-Image-Square-1.jpg" alt="Things to consider when building or renovating a house">
-                            </div>
-                            <div class="text-holder">
-                                <h3>Internal Doors - Things to consider when building or renovating a house</h3>
-                                <span class="post-link">Read This Post</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="ns-slide">
-                    <a href="http://www.deuren.co.uk/projects-and-news/robin-andrews-case-study/">
-                        <div class="nss-inner">
-                            <div class="image-holder">
-                                <img src="<?php echo get_template_directory_uri();  ?>/assets/images/Deuren-Case-Study-Image-Square-3.jpg" alt="Robin Andrews Case Study">
-                            </div>
-                            <div class="text-holder">
-                                <h3>Robin Andrews Case Study</h3>
-                                <span class="post-link">Read This Post</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="ns-slide">
-                    <a href="http://www.deuren.co.uk/projects-and-news/milner-case-study/">
-                        <div class="nss-inner">
-                            <div class="image-holder">
-                                <img src="<?php echo get_template_directory_uri();  ?>/assets/images/Deuren-Case-Study-Image-Square-2.jpg" alt="Milner Case Study">
-                            </div>
-                            <div class="text-holder">
-                                <h3>Milner Case Study</h3>
-                                <span class="post-link">Read This Post</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+     <div id="page">
+            
+            <div class="mh-head Sticky">
+                <span class="mh-btns-left" id="bars">
+                 <span class="mh-text">Menu</span>
+                    <a href="#menu" class="fa fa-bars"></a>
+                    <!-- <a class="mh-hamburger" href="#menu"></a> -->
+                </span>
+               
             </div>
+           
         </div>
-    </div>
-</section>-->
+        <nav id="menu">
+
+                   <?php 
+                  wp_nav_menu( array(
+                'menu'              => 'primary',
+                'theme_location'    => 'primary',
+                'depth'             =>3,
+                'container'         => 'ul',
+               
+                
+                )
+            );
+
+
+
+
+                   ?>
+            </nav>
+
+<div class="fullWidthStrip">
+        <div class="container_12 top-container">
+          <div class="grid_12">
+            <p>all internal doors available in pocket, hinged or sliding configurations. any finish. Any colour.</p>          </div>
+        </div>
+      </div>
+<section class="wrapper">
+
+
+
 
 
 

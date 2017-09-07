@@ -19,11 +19,11 @@
         
 
                        <h1 class="animate-left"><?php echo theme('title');  ?></h1>
-<p class="animate-left"><?php echo theme('text');  ?></p>
-<p class="animate-left">
-<a class="button" href="http://www.deuren.co.uk/internal-doors" onclick="ga('send', 'event', ‘home', ‘lux_internal', 'find_out_more');">
-<?php echo theme('button');  ?></a>
-</p>
+                            <p class="animate-left"><?php echo theme('text');  ?></p>
+                            <p class="animate-left">
+                            <a class="button" href="http://www.deuren.co.uk/internal-doors" onclick="ga('send', 'event', ‘home', ‘lux_internal', 'find_out_more');">
+                            <?php echo theme('button');  ?></a>
+                            </p>
 
 
                     </div>

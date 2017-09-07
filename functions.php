@@ -23,6 +23,7 @@
 ini_set('upload_max_size', '64M');
 ini_set('post_max_size', '64M');
 ini_set('max_execution_time', '300');
+
 /**
  * Define theme path for quicker referencing.
  *
@@ -37,6 +38,7 @@ define('THEME_DIR', get_template_directory_uri());
  * @since 1.0.1
  */
 require_once get_template_directory() . '/inc/acf/config.php';
+
 /**
  * Load our helpers file.
  *
@@ -45,6 +47,7 @@ require_once get_template_directory() . '/inc/acf/config.php';
  * @since 1.0.2
  */
 require_once get_template_directory() . '/inc/helpers/deuren.php';
+require_once get_template_directory() . '/inc/helpers/woocommerce-function.php';
 /**
  * Core theme class.
  *
@@ -109,23 +112,28 @@ class deuren
     public function enqueue_styles()
     {
         // Set up our base stylesheet.
-        wp_enqueue_style('grid_1008-style', THEME_DIR . '/assets/css/grid_1008.css', array(), '1.0.1');
-        wp_enqueue_style('grid_1280-style', THEME_DIR . '/assets/css/grid_1280.css', array(), '1.0.1');
-        wp_enqueue_style('grid_768', THEME_DIR . '/assets/css/grid_768.css', array(), '1.0.1');
-        wp_enqueue_style('grid_768', THEME_DIR . '/assets/css/grid_768.css', array(), '1.0.1');
-        wp_enqueue_style('grid_res', THEME_DIR . '/assets/css/grid_responsive.css', array(), '1.0.1');
+    
+       
+        wp_enqueue_style('grid_res', THEME_DIR . '/assets/css/responsive-tables.css', array(), '1.0.1');
+        wp_enqueue_style('table', THEME_DIR . '/assets/css/grid_responsive.css', array(), '1.0.1');
 
         wp_enqueue_style('st1', THEME_DIR . '/assets/css/easylightbox.css', array(), '1.0.1');
         wp_enqueue_style('st2', THEME_DIR . '/assets/css/fancybox.css', array(), '1.0.1');
         wp_enqueue_style('st3', THEME_DIR . '/assets/css/print.css', array(), '1.0.1');
-        wp_enqueue_style('st3', THEME_DIR . '/assets/css/print.css', array(), '1.0.1');
-        wp_enqueue_style('st3', THEME_DIR . '/assets/css/print.css', array(), '1.0.1');
+       
+         wp_enqueue_style('st4', THEME_DIR . '/assets/css/jquery.mmenu.css', array(), '1.0.1');
+         wp_enqueue_style('st5', THEME_DIR . '/assets/css/jquery.mmenu.all.css', array(), '1.0.1');
 
         wp_enqueue_style('skin', THEME_DIR . '/assets/css/skin.css', array(), '1.0.1');
         wp_enqueue_style('slik', THEME_DIR . '/assets/css/slick/slick.css', array(), '1.0.1');
         wp_enqueue_style('slik_theme', THEME_DIR . '/assets/css/slick/slick-theme.css', array(), '1.0.1');
         
         wp_enqueue_style('old-style', THEME_DIR . '/assets/css/oldstyle.css', array(), '1.0.1');
+        //wp_enqueue_style('old-style-2', THEME_DIR . '/assets/css/styles.css', array(), '1.0.1');
+       // wp_enqueue_style('old-style-1', THEME_DIR . '/assets/css/style.css', array(), '1.0.1');
+        
+    
+         wp_enqueue_style('foundation-min-css', THEME_DIR . '/assets/css/foundation.min.css', array(), '1.0.1');
         wp_enqueue_style('deuren-style', THEME_DIR . '/assets/css/app.css', array(), '1.0.1');
 
         // Include the fontawesome library.
@@ -136,7 +144,10 @@ class deuren
         // Set up our required theme scripts.
 
         wp_enqueue_script('js0', THEME_DIR . '/assets/js/jquery-1.8.2.min.js', array('jquery'), '1.0.1', false);
+        //wp_enqueue_script('js0.1', THEME_DIR . '/assets/js/jquery-1.9.1.js', array('jquery'), '1.9.1', false);
         wp_enqueue_script('js1', THEME_DIR . '/assets/js/jquery.fancybox.pack.js', array('jquery'), '1.0.1', false);
+       wp_enqueue_script('js15', THEME_DIR . '/assets/js/jquery.mmenu.js', array('jquery'), '1.0.1', false);
+        wp_enqueue_script('js16', THEME_DIR . '/assets/js/jquery.mmenu.all.js', array('jquery'), '1.0.1', false);
         wp_enqueue_script('js2', THEME_DIR . '/assets/js/jquery.flexslider-min.js', array('jquery'), '1.0.1', false);
         wp_enqueue_script('js3', THEME_DIR . '/assets/js/jquery.iosslider.min.js', array('jquery'), '1.0.1', false);
         wp_enqueue_script('js4', THEME_DIR . '/assets/js/jquery.isotope.min.js', array('jquery'), '1.0.1', false);
@@ -157,6 +168,8 @@ class deuren
         wp_enqueue_script('deuren-viewport', THEME_DIR . '/assets/js/script_ie.js', array('jquery'), '1.0.1', false);
         wp_enqueue_script('deuren-masonry', THEME_DIR . '/assets/js/script.js', array('jquery'), '1.0.1', false);
         wp_enqueue_script('deuren-slick', THEME_DIR . '/assets/js/slick.js', array('jquery'), '1.0.1', false);
+       //   wp_enqueue_script('deuren-bootstrap', THEME_DIR . '/assets/js/bootstrap.min.js', array('jquery'), '1.9.1', false);
+        wp_enqueue_script('deuren-foundation', THEME_DIR . '/assets/js/foundation.min.js', array('jquery'), '1.9.1', false);
         wp_enqueue_script('deuren-app', THEME_DIR . '/assets/js/app.js', array('jquery'), '1.0.1', false);
 
         // wp_enqueue_script('deuren-app', THEME_DIR . '/dist/js/minify.min.js', array('jquery'), '1.0.1', false);
@@ -178,6 +191,7 @@ class deuren
         register_nav_menus( array(
             // Main navigation
             'main_nav'     => __( 'Main Menu - Desktop', 'deuren' ),
+            'primary' => __('Primary Menu', 'Deuren'),
 
             // Mobile navigation
             'mobile_nav'   => __( 'Main Menu - Mobile', 'deuren' ),
@@ -190,6 +204,7 @@ class deuren
         add_image_size('key-feature', 440, 440, array('center', 'center'));
         // Add RSS feed links to <head> for posts and comments.
         add_theme_support('automatic-feed-links');
+        add_theme_support( 'customize-selective-refresh-widgets' );
     }
       
     /**
@@ -238,8 +253,8 @@ add_filter( 'excerpt_more', 'new_excerpt_more' );
 function wpdocs_my_search_form( $form ) {
     $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
     
-    <input type="text" value="' . get_search_query() . '" name="s" id="s" />
-    <input class="fa fa-facebook" type="submit" id="searchsubmit" value="&#xf002;" />
+    <input placeholder="Search entire store here..." type="text" value="' . get_search_query() . '"  />
+    <input class="fa "  type="submit" id="searchsubmit" value="&#xf002;" />
     </div>
     </form>';
  
@@ -266,7 +281,151 @@ if ($total_pages > 1){
 }
     
 }
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+require_once 'wp-bootstrap-navwalker.php';
+function deuren_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'Widget Area' ),
+        'id'            => 'sidebar-1',
+        'description'   => __( 'Add widgets here to appear in your sidebar.', 'twentyfifteen' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'deuren_widgets_init' );
 
+function my_custom_sidebar() {
+    register_sidebar(
+        array (
+            'name' => __( 'Custom', 'your-theme-domain' ),
+            'id' => 'custom-side-bar',
+            'description' => __( 'Custom Sidebar', 'your-theme-domain' ),
+            'before_widget' => '<aside class="grid_3 sidebar sidebar-right"><section class="block-layered-nav">',
+            'after_widget' => "</section></aside>",
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3><div class="title-divider"><span>&nbsp;</span></div>',
+        )
+    );
+
+}
+add_action( 'widgets_init', 'my_custom_sidebar' );
+
+
+function term_ancestors( $term_id, $taxonomy ) {
+        $ancestors = get_ancestors( $term_id, $taxonomy );
+        $ancestors = array_reverse( $ancestors );
+
+        foreach ( $ancestors as $ancestor ) {
+            $ancestor = get_term( $ancestor, $taxonomy );
+
+            if ( ! is_wp_error( $ancestor ) && $ancestor ) {
+                $this->add_crumb( $ancestor->name, get_term_link( $ancestor ) );
+            }
+        }
+    }
+
+
+
+
+//  custom widget
+// Register and load the widget
+function wpb_load_widget() {
+    register_widget( 'wpb_widget' );
+}
+add_action( 'widgets_init', 'wpb_load_widget' );
+ 
+// Creating the widget 
+class wpb_widget extends WP_Widget {
+ 
+function __construct() {
+parent::__construct(
+ 
+// Base ID of your widget
+'wpb_widget', 
+ 
+// Widget name will appear in UI
+__('Terms Widget', 'wpb_widget_domain'), 
+ 
+// Widget description
+array( 'description' => __( 'Show all terms', 'wpb_widget_domain' ), ) 
+);
+}
+ 
+// Creating widget front-end
+ 
+public function widget( $args, $instance ) {
+    $title = apply_filters( 'widget_title', $instance['title'] );
+     
+    // before and after widget arguments are defined by themes
+    echo $args['before_widget'];
+    if ( ! empty( $title ) )
+    echo $args['before_title'] . $title . $args['after_title'];
+     
+    // This is where you run the code and display the output
+    echo __( 'Hello, World!', 'wpb_widget_domain' );
+    echo $args['after_widget'];
+    }
+             
+    // Widget Backend 
+    public function form( $instance ) {
+    if ( isset( $instance[ 'title' ] ) ) {
+    $title = $instance[ 'title' ];
+    }
+    else {
+    $title = __( 'New title', 'wpb_widget_domain' );
+    }
+    // Widget admin form
+    ?>
+    <p>
+    <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+    <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+    </p>
+    <?php 
+    }
+         
+    // Updating widget replacing old instances with new
+    public function update( $new_instance, $old_instance ) {
+    $instance = array();
+    $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+    return $instance;
+    }
+} // Class wpb_widget ends here
+// First we create a function
+function list_terms_custom_taxonomy( $atts ) {
+ 
+// Inside the function we extract custom taxonomy parameter of our shortcode
+ 
+    extract( shortcode_atts( array(
+        'custom_taxonomy' => '',
+    ), $atts ) );
+ 
+// arguments for function wp_list_categories
+$args = array( 
+taxonomy => $custom_taxonomy,
+title_li => ''
+);
+ 
+// We wrap it in unordered list 
+echo '<div class="block-content" style="">
+                                    <dl class="open-default" id="layered_navigation_accordion">
+                                    <dd>
+                        <ol class="categoryList">
+                           '; 
+echo wp_list_categories($args);
+echo '</ol></dd></dl></div>';
+}
+ 
+// Add a shortcode that executes our function
+add_shortcode( 'ct_terms', 'list_terms_custom_taxonomy' );
+ 
+//Allow Text widgets to execute shortcodes
+ 
+add_filter('widget_text', 'do_shortcode');
 
 
  
