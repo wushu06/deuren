@@ -16,5 +16,5 @@
  * @version     2.0.0
  */
 ?>
-<div class="grid_9 col-main ">
-<ul class="products">
+<section class="category-products">
+<ul class="products-grid first last odd">

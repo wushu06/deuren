@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 //get_sidebar( 'shop' );
   if ( !function_exists('my_custom_sidebar') ||
            !dynamic_sidebar('custom') ) : 
-  	echo 'd';	
+  	
 
  endif; 
 

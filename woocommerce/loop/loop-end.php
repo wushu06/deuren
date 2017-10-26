@@ -17,4 +17,31 @@
  */
 ?>
 </ul>
-</div>
+</section>
+ <script type="text/javascript">decorateGeneric($$('ul.products-grid'), ['odd','even','first','last'])</script>
+        
+        <script type="text/javascript">
+        jQuery(window).load(function(){
+            var $container = jQuery('.products-grid');
+            $container.isotope({
+              duration: 250,
+              itemSelector: '.item',
+    			  resizable: true,
+    			  layoutMode : 'fitRows'
+                });
+            });
+
+
+            //4 cols same height
+           var maxHeightName = 0;
+            jQuery('.products-grid .product-name a').each(function(){
+                var currheightName = jQuery(this).height();
+                if (currheightName > maxHeightName) {
+                maxHeightName = currheightName;
+            }
+            });
+            //make product Name the same height
+            jQuery('.products-grid .product-name a').each(function(){
+                jQuery(this).css({'height' : maxHeightName});
+            });
+      </script>

@@ -56,9 +56,7 @@
 
 
 
-	        <a href="<?php the_permalink();?>" >
-	
-	</a>
+
 
 
 			<div class="small-6 medium-4 columns postfolio-item fs-slide">

@@ -55,7 +55,7 @@ get_header( 'shop' ); ?>
     </header>
 
 		<?php if ( have_posts() ) : ?>
-
+	
 			<?php
 				/**
 				 * woocommerce_before_shop_loop hook.
@@ -64,7 +64,11 @@ get_header( 'shop' ); ?>
 				 * @hooked woocommerce_result_count - 20
 				 * @hooked woocommerce_catalog_ordering - 30
 				 */
+				echo '<nav class="toolbar">
+       				 <div class="sorter">';
 				do_action( 'woocommerce_before_shop_loop' );
+				echo '</div></nav>';
+				do_action( 'woocommerce_after_shop_loop' );
 			?>
 
 			<?php woocommerce_product_loop_start(); ?>
@@ -89,6 +93,10 @@ get_header( 'shop' ); ?>
 			<?php woocommerce_product_loop_end(); ?>
 
 			<?php
+				echo '<nav class="toolbar">
+       				 <div class="sorter">';
+				do_action( 'woocommerce_before_shop_loop' );
+				echo '</div></nav>';
 				/**
 				 * woocommerce_after_shop_loop hook.
 				 *

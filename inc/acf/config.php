@@ -9,13 +9,7 @@ if( function_exists('acf_add_options_page') ) {
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false
 	));
-    acf_add_options_page(array(
-        'page_title' 	=> 'Theme Blocks',
-        'menu_title'	=> 'Theme Blocks',
-        'menu_slug' 	=> 'theme-blocks',
-        'capability'	=> 'edit_posts',
-        'redirect'		=> false
-    ));
+    
 
 }
 

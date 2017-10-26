@@ -27,13 +27,15 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<li <?php post_class(); ?>>
+<li class="grid_3 item">
 	<?php
 	/**
 	 * woocommerce_before_shop_loop_item hook.
 	 *
 	 * @hooked woocommerce_template_loop_product_link_open - 10
 	 */
+	echo '<div class="product-box">';
+	echo '<div class="product-img-box">';
 	do_action( 'woocommerce_before_shop_loop_item' );
 
 	/**
@@ -43,6 +45,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 * @hooked woocommerce_template_loop_product_thumbnail - 10
 	 */
 	do_action( 'woocommerce_before_shop_loop_item_title' );
+	echo '</div>';
 
 	/**
 	 * woocommerce_shop_loop_item_title hook.
@@ -66,5 +69,9 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 * @hooked woocommerce_template_loop_add_to_cart - 10
 	 */
 	do_action( 'woocommerce_after_shop_loop_item' );
+	echo '		<a class="fancybox category-gallery" href="http://www.deuren.co.uk/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/d/e/deuren-gio-glass-door-rosewood.jpg" title="Deuren Gio Glass Rosewood Internal Door">&nbsp;</a>
+';
+
+	echo '</div>';
 	?>
 </li>

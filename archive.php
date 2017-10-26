@@ -1,6 +1,1 @@
-<?php get_header(); ?>
-<!-- Archive -->
-
-
-
-<?php get_footer(); ?>
+<h1>archive</h1>
