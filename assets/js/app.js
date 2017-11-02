@@ -50,38 +50,109 @@ jQuery(document).ready(function ($) {
 		$.fn.centerMe = function () {
 			$(this).css({
 				'left': ($(window).width() - $(this).width()) / 2,
+			//	'right': ($(window).width() - $(this).width()) / 2,
 			});
 		};
-		$('.thinLine').centerMe();
+		
+		//$('.thinLine').centerMe();
 	});
+	var href = path.templateUrl;
+	var left = href+'/assets/images/arrow-left.png';
+	var right = href+'/assets/images/arrow-right.png';
 	/* new style doors */
 	$('.cat-circles').slick({
-		slidesToShow: 5,
+		slidesToShow:7,
 		slidesToScroll: 1,
-		autoplay: true,
+		autoplay: false,
 		autoplaySpeed: 2000,
+		prevArrow:"<img class='a-left control-c prev slick-prev' src='"+left+"'>",
+		nextArrow:"<img class='a-right control-c next slick-next' src='"+right+"'>",
+		responsive: [
+			{
+			  breakpoint: 1024,
+			  settings: {
+				slidesToShow: 3,
+				slidesToScroll: 3,
+				infinite: true,
+				dots: false
+			  }
+			},
+			{
+			  breakpoint: 600,
+			  settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			  }
+			},
+			{
+			  breakpoint: 480,
+			  settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			  }
+			}
+			// You can unslick at a given breakpoint now by adding:
+			// settings: "unslick"
+			// instead of a settings object
+		  ]
 	});
+	$('.ytp-large-play-button').hide();
 	/* single product */
-	$('.config-rep').slick({
+
+	console.info(left);
+	$('.config_rep').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		autoplay: true,
-		autoplaySpeed: 2000,
+		autoplay: false,
+		autoplaySpeed: 7000,
 		arrows: true,
 		dots: true,
 		infinate: false,
-	
+		prevArrow:"<img class='a-left control-c prev slick-prev' src='"+left+"'>",
+		nextArrow:"<img class='a-right control-c next slick-next' src='"+right+"'>"
 	});
 
-	$('.handles-img').slick({
+	$('.handles_img').slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		autoplay: true,
-		autoplaySpeed: 2000,
-		arrows: false,
+		autoplaySpeed: 7000,
+		arrows: true,
 		dots: false,
 		infinate: false,
+		prevArrow:"<img class='a-left control-c prev slick-prev' src='"+left+"'>",
+		nextArrow:"<img class='a-right control-c next slick-next' src='"+right+"'>"
 	
+	});
+	$('.taxonomy_background').slick({
+		dots: false,
+		autoplay: true,
+		autoplaySpeed:1000,
+		infinite: true,
+		speed: 500,
+		fade: true,
+		cssEase: 'linear'
+	})
+	$('#styles').on('click', function(){
+		//
+		$(this).removeClass('change').siblings('button').addClass('change');
+
+		$('#style-wrapper').show(); 
+		$('#wood-wrapper').hide(); 
+	});
+	$('#woods').on('click', function(){
+		//
+		$(this).removeClass('change').siblings('button').addClass('change');
+		$('#style-wrapper').hide();
+		$('#wood-wrapper').show();  
+	});
+	//$('[data-toggle="tooltip"]').tooltip();  
+	$('.icon').on('click', function(e){
+		$(this).hide();
+		
+			   $("#video")[0].src += "&autoplay=1";
+			  // e.preventDefault();
+			
 	});
 	
 });

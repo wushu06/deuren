@@ -144,6 +144,10 @@ class deuren
 	  
 		wp_enqueue_script('deuren-foundation', THEME_DIR . '/assets/js/foundation.min.js', array('jquery'), '1.9.1', false);
 		wp_enqueue_script('deuren-app', THEME_DIR . '/assets/js/app.js', array('jquery'), '1.0.1', false);
+		
+		$translation_array = array( 'templateUrl' => get_stylesheet_directory_uri() );
+		//after wp_enqueue_script
+		wp_localize_script( 'deuren-app', 'path', $translation_array );
 
 	}
 	/**

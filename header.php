@@ -44,11 +44,16 @@
 			<h2 class="logo">
 				<strong>Deuren</strong>
 				<a href="<?php echo site_url(); ?>" title="Deuren" class="logo">
-					<img src="<?php echo get_template_directory_uri();  ?>/assets/images/default/Deuren-Logo.png" alt="Deuren" />
+					<img src="<?php echo get_template_directory_uri();  ?>/assets/images/newAssets/Deuren-Logo.png" alt="Deuren" />
 				</a>
 			</h2>
-			<p class="welcome-msg">Contemporary Internal &amp; External Doors</p>
+			
 		</div>
+		<div class="download-wrapper">
+				<a title="<span class=&quot;download&quot;>Download A Brochure</span>" href="http://#">
+					<span class="download">Download <br>A Brochure</span>
+				</a>
+			</div>
 
 		<div class="menuWrapper">
 
@@ -69,7 +74,8 @@
 						?>
 
 			</nav>
-					</div>
+			</div>
+				
 			<div class="clear"></div>
 
 	</header>

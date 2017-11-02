@@ -4,7 +4,23 @@
 			<?php echo theme('title');  ?>
 		</h1>
 		<?php
-(is_page('styles') ? $tax_name = 'styles' : $tax_name = 'woods' );
+		$tax_name ='';
+//(is_page('styles') ? $tax_name = 'styles' : $tax_name = 'woods' );
+if(strpos($_SERVER['REQUEST_URI'], "internal") !== false && is_page('styles')){
+	$tax_name = 'styles' ;
+}
+if(strpos($_SERVER['REQUEST_URI'], "internal") !== false && is_page('woods')){
+	$tax_name = 'woods' ;
+}
+if(strpos($_SERVER['REQUEST_URI'], "front") !== false && is_page('styles')){
+	$tax_name = 'style_front_door' ;
+}
+if(strpos($_SERVER['REQUEST_URI'], "front") !== false && is_page('woods')){
+	$tax_name = 'woods_front_doors' ;
+}
+//(strpos($_SERVER['REQUEST_URI'], "internal") !== false && is_page('styles') ) ? $tax_name = 'styles'  : $tax_name = 'style_front_door'  );
+//((strpos($_SERVER['REQUEST_URI'], "internal") !== false && is_page('woods') ) ? $tax_name = 'woods'  : $tax_name = 'woods_front_doors'  );
+//echo $tax_namev;
 $terms = get_the_terms( get_the_ID(), $tax_name);
 if(!empty($terms)){  $i = 0; ?>
 
@@ -12,8 +28,8 @@ if(!empty($terms)){  $i = 0; ?>
 
 	 foreach( $terms as $term ){
 	
-		$custom_field = get_field('term_image', $term );
-		
+		$custom_field = get_field('overview_page_image', $term );
+		//var_dump($custom_field );
 		 $image = $custom_field['url'];
 		 if($i % 2 == 0){ 
 		
@@ -76,5 +92,5 @@ if(!empty($terms)){  $i = 0; ?>
 				</div>
 			</div>
 			</div>
-			<?php } $i++;  } }?>
+			<?php  } $i++;  } }?>
 	</div></section>
