@@ -1,3 +1,4 @@
+
 jQuery(document).ready(function ($) {
 	/** Drop down menu making link active (check nav walker) **/
 
@@ -60,7 +61,7 @@ jQuery(document).ready(function ($) {
 	var left = href+'/assets/images/arrow-left.png';
 	var right = href+'/assets/images/arrow-right.png';
 	/* new style doors */
-	$('.cat-circles').slick({
+	/*$('.cat-circles').slick({
 		slidesToShow:7,
 		slidesToScroll: 1,
 		autoplay: false,
@@ -95,7 +96,7 @@ jQuery(document).ready(function ($) {
 			// settings: "unslick"
 			// instead of a settings object
 		  ]
-	});
+	});*/
 	$('.ytp-large-play-button').hide();
 	/* single product */
 
@@ -154,5 +155,45 @@ jQuery(document).ready(function ($) {
 			  // e.preventDefault();
 			
 	});
+
+	// fllow scroll 
 	
 });
+
+jQuery(document).ready(function($){
+	
+		//trigger slide change on click
+		$('.animate a').each(function(){
+			$(this).click(function(event){      
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top - 140}, 500);
+				$('.animate a').removeClass('active');
+				   var sectionLab = $(this).attr('class');
+				   $('.' + sectionLab).addClass('active');
+			});
+		});
+	
+		//trigger nav change as page scrolls
+		$('section').waypoint(function(direction) {
+			var triggerID = $(this).attr('id');
+			var prTritterID = $(this).prev().attr('id');
+	
+			$('nav ul li a').removeClass('active');
+			
+			if(direction == 'down'){
+				$('.' + triggerID + '-nav').addClass('active');
+	
+			}else{
+				$('.' + prTritterID + '-nav').addClass('active');
+			}   
+		},{
+			offset:'140px'
+		});
+	
+		//scroll animate
+		$('.scroll-animate').viewportChecker({
+			classToAdd: 'sa-visible',
+			offset: 200
+		});
+	
+	})

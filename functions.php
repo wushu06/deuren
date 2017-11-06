@@ -136,9 +136,9 @@ class deuren
 		wp_enqueue_script('js4', THEME_DIR . '/assets/js/jquery.isotope.min.js', array('jquery'), '1.0.1', false);
 		
 		wp_enqueue_script('js10', THEME_DIR . '/assets/js/modernizr.js', array('jquery'), '1.0.1', false);
-		
+		wp_enqueue_script('waypoints.min', THEME_DIR . '/assets/js/waypoints.min.js', array('jquery'), '1.0.1', false);
 		wp_enqueue_script('js14', THEME_DIR . '/assets/js/jquery.viewportchecker.js', array('jquery'), '1.0.1', false);
-
+		
 		wp_enqueue_script('deuren-masonry', THEME_DIR . '/assets/js/script.js', array('jquery'), '1.0.1', false);
 		wp_enqueue_script('deuren-slick', THEME_DIR . '/assets/js/slick.js', array('jquery'), '1.0.1', false);
 	  

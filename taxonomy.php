@@ -23,18 +23,18 @@
 <div class="taxonomy">
     <div class="container">
               
-        <div class="taxonomy_background" >
+        <div class="taxonomy_background" style="background: url(
             <?php
                 if( $thumbnail ) :
+                    
                     foreach ( $thumbnail as $image ):
       
-            ?>
               
-                <div>
-                <img src="<?php echo $image['url'] ?>" alt="" class="img-responsive">
-                </div>
-
-            <?php endforeach; endif; ?>
+               
+                echo $image['url']; 
+               
+             endforeach; endif; ?>) no-repeat; background-size: 565px 600px; height: 80vh; background-position: center  "
+            >
 
         </div>
 

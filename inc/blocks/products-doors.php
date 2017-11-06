@@ -1,12 +1,11 @@
 <?php //if(!is_page('unique-features')):?>
 <section class="home-featured">
-  <h1>Products listing for woods and styles</h1>
   <div class="row">
     <div class="small-12 large-10 large-offset-1 columns">
       <article>
         <header class="page-title category-title">
-          <h1></h1>
-          <h2>
+         
+          <h2 class="text-center">
             <?php echo theme('products_doors_title'); ?>
           </h2>
         </header>

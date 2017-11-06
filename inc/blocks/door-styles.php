@@ -8,15 +8,19 @@
 //(is_page('styles') ? $tax_name = 'styles' : $tax_name = 'woods' );
 if(strpos($_SERVER['REQUEST_URI'], "internal") !== false && is_page('styles')){
 	$tax_name = 'styles' ;
+	$small_title = 'INTERNAL DOOR';
 }
 if(strpos($_SERVER['REQUEST_URI'], "internal") !== false && is_page('woods')){
 	$tax_name = 'woods' ;
+	$small_title = 'INTERNAL DOOR';
 }
 if(strpos($_SERVER['REQUEST_URI'], "front") !== false && is_page('styles')){
 	$tax_name = 'style_front_door' ;
+	$small_title = 'FRONT DOOR';
 }
 if(strpos($_SERVER['REQUEST_URI'], "front") !== false && is_page('woods')){
 	$tax_name = 'woods_front_doors' ;
+	$small_title = 'FRONT DOOR';
 }
 //(strpos($_SERVER['REQUEST_URI'], "internal") !== false && is_page('styles') ) ? $tax_name = 'styles'  : $tax_name = 'style_front_door'  );
 //((strpos($_SERVER['REQUEST_URI'], "internal") !== false && is_page('woods') ) ? $tax_name = 'woods'  : $tax_name = 'woods_front_doors'  );
@@ -47,7 +51,7 @@ if(!empty($terms)){  $i = 0; ?>
 				<div class="small-6 large-6 columns">
 				<div class="container-text">
 						<a href="<?php echo get_term_link( $term ) ?>">
-							<p class="small-title"><?php echo $tax_name; ?></p>
+							<p class="small-title"><?php echo $small_title; ?></p>
 							<h1 class="right-title">
 								<?php echo $term->name;  ?>
 							</h1>
@@ -71,7 +75,7 @@ if(!empty($terms)){  $i = 0; ?>
 				
 					<div class="container-text">
 						<a href="<?php echo get_term_link( $term ); ?>">
-							<p class="small-title"><?php echo $tax_name; ?></p>
+							<p class="small-title"><?php echo $small_title; ?></p>
 							<h1 class="left-title">
 								<?php echo $term->name; ?>
 							</h1>

@@ -16,103 +16,157 @@ if($terms_woods){
     $term_wood_name = "";
 }
 
+// remove words from title 
+$filtered_words = array(
+    'Deuren',
+    'Internal',
+    'Door',
+    'Front',
+    'Internal',
+    'Contemporary'
+);
+
+
+
+ $filtered_text = str_replace($filtered_words,'',  get_the_title());
+
 ?>
 
 <!-- start of internal -->
-<div class="single-internal">
+<section class="single-internal">
     <div class="container">
     <div class="max-container">
-        <div class="internal-wrapper" >
+        <div class="internal-wrapper "  >
             <div class="row">
-                <div class="container-wrapper">
+                <div class="container-wrapper section" id="slide-1" name="slide-1">
                     <div class="small-12 large-6  columns">
                         <img src="<?php echo theme('background')['url']?>" class="img-responsive" alt="">
                     </div>
                     <div class="small-12 large-6  columns">
                         <p class="small-title">INTERNAL Door</p>
-                        <h1><?php echo theme('style_title') .'<br>'.theme('woods_title');?></h1>
+                        <h1><?php echo $term_style_name.'<br> '.$term_wood_name;  ?></h1>
                         <div class="parag">
-                            <?php echo theme('content') ?>
-                        </div>
-                        <div class="price">
-                            <?php echo theme('price') ?>
+                        <!-- ==== woods === -->    
+                        <div class="cat-wrapper" id="wood-wrapper">
 
-                        </div>
-                  </div> 
-                </div>
-            </div>
-        </div>
-      <div class="clear"></div>
-      
-        <div class="toggle text-center ">
-            <button id="woods" class="explore-btn">FILTER BY WOODS AND FINISHES</button>
-            <button id="styles" class="explore-btn change">FILTER BY STYLES</button>
-        <div class="clear-fix"></div>
-        <div class="thinLine" style="margin-top: 30px;"></div>
-        <div class="cat-wrapper" id="wood-wrapper">
-
-         <div class="cat-circles">
+                    <div class="cat-circles">
             
-            
+                    <p class="term_name_s">CHOOSE YOUR WOOD OR COLOUR: <strong><?php echo $term_wood_name; ?></strong></p>
                 <?php
-            if(!empty($term_wood_name )){
-                    $args = array(
-                            'post_type' => 'internal_doors',
-                            'posts_per_page'=> -1,   
-                            'orderby'  => array( 
-                                    'ID' => 'DESC' ,
-                                ),
-                                'tax_query' => array(
-                                
-                                  //  'relation' => 'AND',
-                                    array(
-                                        'taxonomy' => 'styles',
-                                        'field'    => 'slug',
-                                        'terms'    => array( $term_style_name ),
-                                        
-                                    ),
-                                   /* array(
-                                        'taxonomy' => 'woods',
-                                        'field'    => 'slug',
-                                        'terms'    => array( $term_wood_name ),
-                                        'operator' => 'NOT IN',
-                                        
-                                    ),*/
-                                ),
-                            
-                        );
-                        
-                        $query = new WP_Query( $args );
-                        //var_dump( $query);
-                        
-                        $query_contents=Array();
-                        while ( $query->have_posts() ) {
-                            $query->the_post();  
-                        
-                            $terms_styles = wp_get_post_terms($post->ID, 'styles', array("fields" => "all"));
-                            
-                            foreach ($terms_styles as $term_style) {  echo '<div class="circle styles"><a href="'.get_permalink().'"  data-toggle="tooltip" title="'.theme("woods_title").' "> ';
-                               // echo  theme("woods_title").' | <br>';
-                                echo the_post_thumbnail(array(80,80) );
-                                echo '</a></div>';
-                                
-                            }
-                            ?>
 
-                    <?php } 
+                // get all the posts filtered by terms EXCLUDING the current term
+                    if(!empty($term_wood_name )){
+                            $args = array(
+                                    'post_type' => 'internal_doors',
+                                    'posts_per_page'=> -1,   
+                                    'orderby'  => array( 
+                                            'ID' => 'DESC' ,
+                                        ),
+                                        'tax_query' => array(
+                                        
+                                         'relation' => 'AND',
+                                            array(
+                                                'taxonomy' => 'styles',
+                                                'field'    => 'slug',
+                                                'terms'    => array( $term_style_name ),
+                                                
+                                            ),
+                                         array(
+                                                'taxonomy' => 'woods',
+                                                'field'    => 'slug',
+                                                'terms'    => array( $term_wood_name ),
+                                                'operator' => 'NOT IN',
+                                                
+                                            ),
+                                        ),
+                                    
+                                );
+                                 // get all the posts filtered by terms INCLUDING the current term
+                                $args_v2 = array(
+                                    'post_type' => 'internal_doors',
+                                    'posts_per_page'=> -1,   
+                                    'orderby'  => array( 
+                                            'ID' => 'DESC' ,
+                                        ),
+                                        'tax_query' => array(
+                                        
+                                         'relation' => 'AND',
+                                            array(
+                                                'taxonomy' => 'styles',
+                                                'field'    => 'slug',
+                                                'terms'    => array( $term_style_name ),
+                                                
+                                            ),
+                                         array(
+                                                'taxonomy' => 'woods',
+                                                'field'    => 'slug',
+                                                'terms'    => array( $term_wood_name ),
+                                                //'operator' => 'NOT IN',
+                                                
+                                            ),
+                                        ),
+                                    
+                                );
+                                
+                                $query = new WP_Query( $args );
+                                
+                                //var_dump( $query);
+                                
+                               
+                                while ( $query->have_posts() ) {
+                                    $query->the_post();  
+                                    $terms_styles = wp_get_post_terms($post->ID, 'styles', array("fields" => "all"));
+                                    
+                                    foreach ($terms_styles as $term_style) {  echo '<div class="circle styles"><a href="'.get_permalink().'"  data-toggle="tooltip" title="'.theme("woods_title").' "> ';
+                                    // echo  theme("woods_title").' | <br>';
+                                        echo the_post_thumbnail(array(40,40) );
+                                        echo '</a></div>';
+                                        
+                                        
+                                    }
+                                  
+                                    ?>
+
+                            <?php } 
+                                
+                               
+
+                                    $query_v2 = new WP_Query( $args_v2 );
+                                    while ( $query_v2->have_posts() ) {
+                                        $query_v2->the_post();  
+                                    
+                                        $terms_styles_v2 = wp_get_post_terms($post->ID, 'styles', array("fields" => "all"));
+                                        
+                                        foreach ($terms_styles_v2 as $term_style_v2) {  echo '<div class="circle styles active-term"><a href="'.get_permalink().'"  data-toggle="tooltip" title="'.theme("woods_title").' "> ';
+                                        // echo  theme("woods_title").' | <br>';
+                                            echo the_post_thumbnail(array(40,40) );
+                                            echo '</a></div>';
+                                            
+                                            
+                                        }
+                                      
+                                        ?>
+    
+                                <?php } 
+                                    
+                                    wp_reset_query();
+                                        }else {
+                                            echo ' No other Woods available';
+                                        }
+                                      
+                                        
+                                  
+                                    
+                                    
+                                ?>
                         
-                        wp_reset_query();
-                            }else {
-                                echo ' No other Woods available';
-                            }
-                        ?>
-                   
-            </div>
-        </div>    
-        
-       <div class="cat-wrapper styles " id="style-wrapper" style="display: none">
+                    </div>
+                </div>    
+
+                <!-- ==== styles === -->
+                <div class="cat-wrapper styles " id="style-wrapper" >
             <div class="cat-circles">
-            
+            <p class="term_name_w">CHOOSE YOUR STYLE: <strong><?php echo $term_style_name;  ?></strong></p>
                 <?php 
                         if(!empty($term_wood_name )){
                             $args = array(
@@ -122,20 +176,46 @@ if($terms_woods){
                                         'ID' => 'DESC' ,
                                     ),
                                     'tax_query' => array(
-                                        //'relation' => 'AND',
+                                    'relation' => 'AND',
                                         array(
                                             'taxonomy' => 'woods',
                                             'field'    => 'slug',
                                             'terms'    => array( $term_wood_name ),
                                         ),
                                         
-                                      /*  array(
+                                       array(
                                             'taxonomy' => 'styles',
                                             'field'    => 'slug',
                                             'terms'    => array( $term_style_name ),
                                             'operator' => 'NOT IN',
                                             
-                                        ),*/
+                                        ),
+                                    ),
+                                
+                            );
+                              // get all the posts filtered by terms INCLUDING the current term
+                              $args_v2 = array(
+                                'post_type' => 'internal_doors',
+                                'posts_per_page'=> -1,   
+                                'orderby'  => array( 
+                                        'ID' => 'DESC' ,
+                                    ),
+                                    'tax_query' => array(
+                                    
+                                     'relation' => 'AND',
+                                        array(
+                                            'taxonomy' => 'woods',
+                                            'field'    => 'slug',
+                                            'terms'    => array( $term_wood_name  ),
+                                            
+                                        ),
+                                     array(
+                                            'taxonomy' => 'styles',
+                                            'field'    => 'slug',
+                                            'terms'    => array( $term_style_name  ),
+                                            //'operator' => 'NOT IN',
+                                            
+                                        ),
                                     ),
                                 
                             );
@@ -149,31 +229,74 @@ if($terms_woods){
                                 $terms_woods = wp_get_post_terms($post->ID, 'woods', array("fields" => "all"));
                                 
                                 foreach ($terms_woods as $term_wood) { 
-                                    echo '<div class="circle woods"><a href="'.get_permalink().' data-toggle="tooltip" title="'.theme("style_title").'"> ';
+                                    echo '<div class="circle woods"><a href="'.get_permalink().'"  data-toggle="tooltip" title="'.theme("styles_title").' "> ';
                                   //  echo  theme("style_title").' | <br>';
-                                   echo the_post_thumbnail(array(80,80)  );
+                                   echo the_post_thumbnail(array(40,40)  );
                                     echo '</a></div>';
                                 }
+
+
+
+                             
+                               
+                               
                                 ?>
-                <?php } wp_reset_query();
-                        }else {
-                            echo 'No Styles available';
-                        }
-                            ?>
+                            <?php } 
+                            $query_v2 = new WP_Query( $args_v2 );
+                            while ( $query_v2->have_posts() ) {
+                                $query_v2->the_post();  
+                            
+                                $terms_woods_v2 = wp_get_post_terms($post->ID, 'woods', array("fields" => "all"));
+                                
+                                foreach ($terms_woods_v2 as $term_wood_v2) { 
+                                    echo '<div class="circle woods active-term"><a href="'.get_permalink().'"  data-toggle="tooltip" title="'.theme("styles_title").' "> ';
+                                  //  echo  theme("style_title").' | <br>';
+                                   echo the_post_thumbnail(array(40,40)  );
+                                    echo '</a></div>';
+                                }
+                                }
+                                    }else {
+                                        echo 'No Styles available';
+                                    }
+                                wp_reset_query();
+                                        ?>
 
             </div>
         </div>    
-        <div class="thinLine"></div>
+        
+
+
+
+
+
+
+                        </div>
+                        <div class="price">
+                            <?php echo theme('price') ?>
+
+                        </div>
+                  </div> 
+                </div>
+            </div>
+        </div>
+      <div class="clear"></div>
+      
+        <div class="toggle text-center ">
+            <h1><?php the_title() ?></h1>
+            <div class="thinLine"></div>
+            <?php echo theme('content'); ?>
+                                    
+       
         <div class="clearfix">
        
 
        
     </div>
-</div>
+</section>
 
 <!-- end of single internal -->
 <!-- fixed blocks -->
-<div class="prehung-vid">
+<section class="prehung-vid" id="slide-2" name="slide-2">
 
     <div class="row">
         <div class="small-12 large-12 columns">
@@ -194,9 +317,9 @@ if($terms_woods){
     </div>
     
         
-</div>
+</section>
 <div class="clearfix"></div> 
- <div class="config">
+ <section class="config" id="slide-3" name="slide-3">
             <h1 class="text-center">
                 <?php echo theme('configuration_title'); ?>
             </h1>
@@ -232,11 +355,11 @@ if($terms_woods){
                 <?php endforeach; endif; ?>
             </div>
 
- </div>
+ </section>
                     </div>
 <div class="clearfix"></div> 
              
- <div class="handles">
+ <section class="handles " id="slide-4" name="slide-4">
            
     <h1 class="text-center">
                         <?php echo theme('handle_title'); ?>
@@ -253,11 +376,11 @@ if($terms_woods){
                                 <img src="<?php echo $image['url']; ?>" alt="">
                             </div>
                             <?php endforeach; endif; ?>
- </div>
+ </section>
      
 <!-- end of fixed blocks -->
 <div class="clear"></div>
-<div class="table-sepc" style="background: url(<?php echo get_template_directory_uri() ?>/assets/images/newAssets/Deuren-Table-Spec-Background.png">
+<section class="table-sepc" id="slide-5" name="slide-5" style="background: url(<?php echo get_template_directory_uri() ?>/assets/images/newAssets/Deuren-Table-Spec-Background.png">
     <div class="max-container">
         <div class="table-spec_title">
             <h1 class="text-center"><?php echo $term_style_name;  ?> SPECIFICATION</h1>
@@ -269,7 +392,16 @@ if($terms_woods){
 
     </div>
 
-</div>
+                                    </section>
 
-		
+<nav class="dot-nav">
+    <ul>
+        <li class="animate"><a href="#slide-1" class="slide-1-nav active">Slide 1</a></li>
+        <li class="animate"><a href="#slide-2" class="slide-2-nav">Slide 2</a></li>
+        <li class="animate"><a href="#slide-3" class="slide-3-nav">Slide 3</a></li>
+        <li class="animate"><a href="#slide-4" class="slide-4-nav">Slide 4</a></li>
+        <li class="animate"><a href="#slide-5" class="slide-5-nav">Slide 5</a></li>
+        
+    </ul>
+</nav>		
 <?php get_footer(); ?>
