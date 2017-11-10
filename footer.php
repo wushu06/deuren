@@ -23,10 +23,10 @@
 					<li><a href="mailto:info@deuren.co.uk">info@deuren.co.uk</a></li>
 				</ul>
 				<ul class="ftr-cntct-list">
-					<li><a href="http://www.deuren.co.uk/terms-and-conditions/">Ts &amp; Cs</a></li>
-					<li><a href="http://www.deuren.co.uk/privacy-policy/">Privacy Policy</a></li>
-					<li><a href="http://www.deuren.co.uk/cookie-policy/">Cookie Policy</a></li>
-					<li><a href="http://www.deuren.co.uk/delivery-and-customer-service/">Delivery &amp; Customer Service</a></li>
+					<li><a href="<?php echo site_url() ?>/terms-and-conditions/">Ts &amp; Cs</a></li>
+					<li><a href="<?php echo site_url() ?>/privacy-policy/">Privacy Policy</a></li>
+					<li><a href="<?php echo site_url() ?>/cookie-policy/">Cookie Policy</a></li>
+					<li><a href="<?php echo site_url() ?>/delivery-and-customer-service/">Delivery &amp; Customer Service</a></li>
 				</ul>
 				<p><a href="http://www.thebiggerboat.co.uk">Web Design</a> by <a href="http://www.thebiggerboat.co.uk"><strong>The Bigger Boat</strong></a></p>
 			</div>

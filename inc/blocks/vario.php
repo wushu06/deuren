@@ -1,3 +1,4 @@
+<!-- vario block -->
 <section class="vario">
     <div class="container">
        

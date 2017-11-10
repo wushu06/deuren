@@ -1,3 +1,4 @@
+<!-- prehung block -->
 <section class="home-featured prehung scroll-animate">
 	<div class="prehung-inner">
 		&nbsp;

@@ -1,3 +1,4 @@
+<!-- prehung door block -->
 <?php if(theme('use_prehung_door_block')){ ?>
 
 <section class="home-pre-hung full-height">

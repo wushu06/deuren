@@ -1,3 +1,4 @@
+<section class="gallery">
 <div class="breadcrumbs-wrapper">
 	<div class="container_12">
 		<div class="grid_12">
@@ -27,9 +28,9 @@
 
 
 
-<div class="grid-sizer"></div>
 <div class="grid">
- 
+<div class="grid-sizer"></div>
+
   	<?php 
 
 		$images = theme('gallery');
@@ -57,7 +58,7 @@
 </div>
 
 
-
+</section>
 
 
 
@@ -69,7 +70,12 @@ jQuery(document).ready(function($) {
 // init Isotope
 var $grid = $('.grid').isotope({
   itemSelector: '.element-item',
-  layoutMode: 'fitRows'
+	layoutMode: 'fitRows',
+	masonry: {
+  columnWidth: 50,
+  gutter: 10
+}
+	
 });
 // filter functions
 var filterFns = {
@@ -84,6 +90,8 @@ var filterFns = {
     return name.match( /ium$/ );
   }
 };
+
+
 // bind filter button click
 $('.filters-button-group').on( 'click', 'button', function() {
   var filterValue = $( this ).attr('data-filter');

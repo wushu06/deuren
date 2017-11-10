@@ -174,7 +174,7 @@ jQuery(document).ready(function($){
 		});
 	
 		//trigger nav change as page scrolls
-		$('section').waypoint(function(direction) {
+		$('.section').waypoint(function(direction) {
 			var triggerID = $(this).attr('id');
 			var prTritterID = $(this).prev().attr('id');
 	
@@ -195,5 +195,23 @@ jQuery(document).ready(function($){
 			classToAdd: 'sa-visible',
 			offset: 200
 		});
+		
+		//add active class to parents li of dropdown submenu 
+		$('.active').parents('.dropdown').addClass('addContent');
+
+		//fancybox for prices
+		$('.fancybox-price').fancybox({
+            autoSize: false,
+            fitToView: true,
+            closeClick: false,
+            openEffect: 'fade',
+            closeEffect: 'fade',
+            prevEffect: 'fade',
+            nextEffect: 'fade',
+            scrolling: 'no',
+            height: '300px',
+            maxHeight: '300px',
+            autoWidth: true,
+        });
 	
 	})

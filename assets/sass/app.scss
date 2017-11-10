@@ -4,10 +4,6 @@
 
 /* ---- isotope ---- */
 
-.new_cont .grid {
-	background: #fff;
-}
-
 /* clear fix */
 .new_cont .grid:after {
 	content: '';
@@ -1862,12 +1858,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   }
   
   .isotope-item {
-    z-index: 2;
+   
   }
   
   .isotope-hidden.isotope-item {
     pointer-events: none;
-    z-index: 1;
+   
   }
   
   .isotope {
@@ -9323,7 +9319,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       }
       .button {
         background-color: rgba(255, 255, 255, 0.15);
-        color: #ffffff;
+        color: #fff;
         padding: 10px 15px;
         margin-top: 40px;
         margin-bottom: 20px;
@@ -9343,11 +9339,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         color: #222;
         border: none;
         p {
-          color: #222 !important;
+          color: #222 ;
         }
         h1 {
           text-align: left;
-          color: #222 !important;
+          color: #222 ;
           width: 100%;
           position: relative;
           &:after {
@@ -9854,7 +9850,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
           .fss-wrapper {
             margin-bottom: 30px;
           }
-          form {
+          #gform{
             max-width: 510px;
             width: 100%;
             margin: 0 auto;
@@ -10266,7 +10262,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   
   @media screen and (min-width: 1024px) {
     body.home .main-doors {
-      padding: 100px 0;
+      padding: 100px 0 0;
     }
   }
   
@@ -10902,7 +10898,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     .newsletter-box {
       position: relative;
     }
-    form {
+    #gform{
       margin-bottom: 90px;
       label {
         display: block;
@@ -10910,7 +10906,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         color: #ffffff;
         text-transform: uppercase;
         line-height: 1;
-        margin-bottom: 20px;
+       
       }
       input {
         &[type="text"] {
@@ -11733,7 +11729,7 @@ h4 {
   padding-bottom: 20px;
   color: #474747;
   display: block;
-  float: left;
+  
 }
 
 .news_image {
@@ -11924,7 +11920,7 @@ table {
 }
 
 th {
-  background-color: #000000;
+ 
   color: #ffffff;
   padding: 10px;
   text-transform: uppercase;
@@ -11932,7 +11928,7 @@ th {
 }
 
 tr, td {
-  border: 1px solid #C8C7C7;
+  
   padding: 10px;
 }
 
@@ -11942,7 +11938,6 @@ tr, td {
 
 td {
   color: #231F20;
-  background-color: #FAFAFA;
 }
 
 .cs_tdleft {
@@ -12036,3 +12031,6 @@ input.button span {
 /*
 *          End Old styles.css
 */
+#newsWrapper p {
+  color: #222;
+}

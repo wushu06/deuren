@@ -1,4 +1,4 @@
-
+<!-- featured width block -->
 <section class="home-featured">
 	<div class="row">
 		<div class="small-12 large-10 large-offset-1 columns">

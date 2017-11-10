@@ -50,7 +50,7 @@
 			
 		</div>
 		<div class="download-wrapper">
-				<a title="<span class=&quot;download&quot;>Download A Brochure</span>" href="http://#">
+				<a title="<span class=&quot;download&quot;>Download A Brochure</span>" href="<?php echo site_url().'/download-a-brochure' ?>">
 					<span class="download">Download <br>A Brochure</span>
 				</a>
 			</div>

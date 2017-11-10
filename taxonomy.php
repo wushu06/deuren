@@ -33,7 +33,7 @@
                
                 echo $image['url']; 
                
-             endforeach; endif; ?>) no-repeat; background-size: 565px 600px; height: 80vh; background-position: center  "
+             endforeach; endif; ?>) no-repeat; background-size: 500px; height: 80vh; background-position: center  "
             >
 
         </div>

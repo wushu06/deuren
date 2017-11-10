@@ -1,4 +1,4 @@
-
+<!-- configuration block -->
 <?php if(theme('use_configuration_block')){ ?>
 <section class="page-content home-featured white attribute-wrap">
 	<div class="row">
@@ -194,7 +194,7 @@
 			</div>
 
 			<p class="center">&nbsp;</p>
-			<p class="center"><a class="button" href="http://www.deuren.co.uk/download-a-brochure">Request a Brochure</a></p>
+			<p class="center"><a class="button" href="<?php echo site_url()?>/download-a-brochure/ " style="color: #fff;">Request a Brochure</a></p>
 
 			<!--
 			*** strat wrapper fancy box

@@ -9,7 +9,7 @@
             <nav class="breadcrumbs">
                 <ul>
                                             <li class="home">
-                                                    <a href="http://www.deuren.co.uk/" title="Go to Home Page">Home</a>
+                                                    <a href="<?php echo site_url(); ?>" title="Go to Home Page">Home</a>
                                                                             <span>&#124;</span>
                                                 </li>
                                             <li class="cms_page">

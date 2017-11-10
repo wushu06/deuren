@@ -1,3 +1,4 @@
+<!-- door styles block -->
 <section class="door_styles">
 	<div class="container">
 		<h1 class="text-center main-title">

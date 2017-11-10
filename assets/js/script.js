@@ -4,11 +4,7 @@ jQuery(document).ready(function(jQuery) {
         jQuery.support.noCloneEvent = true;
     }
     /* End fix for IE */
-    /* Top Cart */
-    jQuery('.top-cart').click(function() {
-        jQuery(this).toggleClass('active');
-        jQuery('#topCartContent').slideToggle(500).toggleClass('active')
-    })
+  
     /* Top Cart */
     /* More Views Slider */
     if (jQuery('#more-views-slider').length) {
@@ -526,9 +522,9 @@ jQuery(document).ready(function($) {
             }
         }]
     });
-    $('.dot1 button').html('Internal Doors');
-    $('.dot2 button').html('Front Doors');
-    $('.dot3 button').html('Garage Doors');
+    $('#slick-slide00 button').html('Internal Doors');
+    $('#slick-slide01 button').html('Front Doors');
+    $('#slick-slide02 button').html('Garage Doors');
     /*$(".fs-menu li a").click(function(e){
         e.preventDefault();
         slideIndex = $(this).parent().index();

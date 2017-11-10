@@ -6,10 +6,10 @@
 			</h2>
 			
 			<?php if(is_page('Bespoke')){
-				 partial( 'bespoke' );
-			}else if(is_page('Woods And Finishes')) {
-				partial( 'woods-finishes' );
-			}else{	?>
+				 	partial( 'bespoke' );
+					}else if(is_page('Woods And Finishes')) {
+						partial( 'woods-finishes' );
+					}else{	?>
 				<div class="small-12 medium-10 medium-offset-1 large-8 large-offset-2 columns door-handles">
 				<?php	
 				$i = 1;
@@ -46,7 +46,7 @@
 				&nbsp;
 			</div>
 			<p class="center">
-				<a class="button" href="http://www.deuren.co.uk/internal-doors/all">
+				<a class="button" href="<?php echo site_url() ?>/internal-doors/">
 					<?php echo theme('button'); ?>
 				</a>
 			</p>

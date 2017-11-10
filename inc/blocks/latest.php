@@ -1,4 +1,4 @@
-
+<!-- latest block -->
 <section class="home-projects">
     <div class="row">
         <div class="small-12 large-10 large-offset-1 columns">

@@ -11,18 +11,14 @@
                         <span class="date"><?php the_date(); ?></span>
                             <h1 class="caseStudyTitle"><?php the_title(); ?></h1>
 
-                            
                         </div>
                     </div>
-
 
                     <div class="news">
                         <p>
                             <?php the_content(); ?>
                         </p>
                     </div>
-
-
 
                     <div class="news-item-comment">
                     </div>
@@ -40,12 +36,9 @@
                     $prev_post = get_previous_post();
                   if (!empty($prev_post)): ?>
 
-
-
-           
                         <h6 class="right prev">PREVIOUS ARTICLE</h6>
                         <a href="<?php echo $prev_post->guid ?>">
-                         <h3 class="right"><?php echo $prev_post->post_title ?></h3>
+                         <h3 class="right" style="color: #222;"><?php echo $prev_post->post_title ?></h3>
                         </a>
                   
                 <?php endif?>
@@ -56,10 +49,9 @@
          
             if (!empty($next_post)): ?>
             
-                      
                             <h6 class="next">NEXT ARTICLE</h6>
                             <a href="<?php echo $next_post->guid ?>">
-                                <h3 ><?php echo $next_post->post_title ?></h3>
+                                <h3 style="color: #222;"><?php echo $next_post->post_title ?></h3>
                             </a>
                        
                     <?php endif;?>
@@ -67,7 +59,4 @@
         </div>
     </div>
 </div>
-
-
-
 <?php get_footer();?>

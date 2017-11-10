@@ -1,3 +1,4 @@
+<!-- any colors block -->
 <?php if(theme('use_any_colors_block')){ ?>
 <section class="home-any colour full-height bg-animate sa-visible">
 	<div class="row">
