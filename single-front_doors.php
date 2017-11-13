@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<!-- single front doors -->
 <?php 
 
  $terms_s = get_terms( 'woods_front_doors', array( 'hide_empty' => true, 'orderby' => 'slug', 'order' => 'ASC' ));
@@ -26,19 +26,14 @@ $filtered_words = array(
     'Contemporary'
 );
 
-
-
  $filtered_text = str_replace($filtered_words,'',  get_the_title());
-
-
 
 ?>
 
-<!-- start of internal -->
-<div class="single-internal">
-    <div class="container">
+<div class="single-internal  section" id="slide-1" name="slide-1">
+<div class="container">
     <div class="max-container">
-        <div class="internal-wrapper" >
+        <div class="internal-wrapper ">
             <div class="row">
                 <div class="container-wrapper">
                     <div class="small-12 large-6  columns">
@@ -114,7 +109,6 @@ $filtered_words = array(
                                                         
                                                         //var_dump( $query);
                                                         
-                                                       
                                                         while ( $query->have_posts() ) {
                                                             $query->the_post();  
                                                         
@@ -122,9 +116,9 @@ $filtered_words = array(
                                                             
                                                             foreach ($terms_styles as $term_style) {  echo '<div class="circle styles"><a href="'.get_permalink().'"  data-toggle="tooltip" title="'.theme("woods_title").' "> ';
                                                             // echo  theme("woods_title").' | <br>';
-                                                                echo the_post_thumbnail(array(40,40) );
-                                                                echo '</a></div>';
-                                                                
+                                                            $image = theme('styles_image'); 
+                                                            echo "<img src='".($image ? $image['url'] : 'http://via.placeholder.com/50x50')."' width='50' height='50'>";
+                                                            echo '</a></div>';
                                                                 
                                                             }
                                                           
@@ -132,19 +126,17 @@ $filtered_words = array(
                         
                                                     <?php } 
                                                         
-                                                       
-                        
                                                             $query_v2 = new WP_Query( $args_v2 );
                                                             while ( $query_v2->have_posts() ) {
                                                                 $query_v2->the_post();  
                                                             
                                                                 $terms_styles_v2 = wp_get_post_terms($post->ID, 'style_front_door', array("fields" => "all"));
                                                                 
-                                                                foreach ($terms_styles_v2 as $term_style_v2) {  echo '<div class="circle styles active-term"><a href="'.get_permalink().'"  data-toggle="tooltip" title="'.theme("woods_title").' "> ';
-                                                                // echo  theme("woods_title").' | <br>';
-                                                                    echo the_post_thumbnail(array(40,40) );
-                                                                    echo '</a></div>';
-                                                                    
+                                                                foreach ($terms_styles_v2 as $term_style_v2) { echo '<div class="circle styles active-term"><a href="'.get_permalink().'"  data-toggle="tooltip" title="'.theme("woods_title").' "> ';
+                                                                    // echo  theme("woods_title").' | <br>';
+                                                                    $image = theme('styles_image'); 
+                                                                    echo "<img src='".($image ? $image['url'] : 'http://via.placeholder.com/50x50')."' width='50' height='50'>";
+                                                                        echo '</a></div>';
                                                                     
                                                                 }
                                                               
@@ -157,10 +149,6 @@ $filtered_words = array(
                                                                     echo ' No other Woods available';
                                                                 }
                                                               
-                                                                
-                                                          
-                                                            
-                                                            
                                                         ?>
                                                 
                                             </div>
@@ -233,16 +221,11 @@ $filtered_words = array(
                                                         
                                                         foreach ($terms_woods as $term_wood) { 
                                                             echo '<div class="circle woods"><a href="'.get_permalink().'"  data-toggle="tooltip" title="'.theme("styles_title").' "> ';
-                                                          //  echo  theme("style_title").' | <br>';
-                                                           echo the_post_thumbnail(array(40,40)  );
+                                                            $image = theme('wood_image'); 
+                                                            echo "<img src='".($image ? $image['url'] : 'http://via.placeholder.com/50x50')."' width='50' height='50'>";
                                                             echo '</a></div>';
                                                         }
                         
-                        
-                        
-                                                     
-                                                       
-                                                       
                                                         ?>
                                                     <?php } 
                                                     $query_v2 = new WP_Query( $args_v2 );
@@ -253,8 +236,8 @@ $filtered_words = array(
                                                         
                                                         foreach ($terms_woods_v2 as $term_wood_v2) { 
                                                             echo '<div class="circle woods active-term"><a href="'.get_permalink().'"  data-toggle="tooltip" title="'.theme("styles_title").' "> ';
-                                                          //  echo  theme("style_title").' | <br>';
-                                                           echo the_post_thumbnail(array(40,40)  );
+                                                            $image = theme('wood_image'); 
+                                                            echo "<img src='".($image ? $image['url'] : 'http://via.placeholder.com/50x50')."' width='50' height='50'>";
                                                             echo '</a></div>';
                                                         }
                                                         }
@@ -264,145 +247,196 @@ $filtered_words = array(
                                                         wp_reset_query();
                                                                 ?>
                         
-                                    </div>
-                                </div>    
-                                
-                        
-                        
-                        
-                        
-                        
-                        
-                                                </div>
-                                                <div class="price">
-                                                    <?php echo theme('price') ?>
-                        
-                                                </div>
-                                          </div> 
-                                        </div>
-                                    </div>
-                                </div>
-                              <div class="clear"></div>
-                              
-        <div class="toggle text-center ">
-            
-             <?php echo theme('content') ?>
-        <div class="clear-fix"></div>
-        <div class="thinLine" style="margin-top: 30px;"></div>
-      
-        <div class="clearfix">
-       
+           
+                        </div>
+                        </div>
 
-       
+                    </div>
+                    <div class="price ">
+                        <?php if(theme('price') !==''){ ?>
+                        <?php echo theme('price') ?>
+                        <p>
+                            <a href="#content-price" class="fancybox-price explore-btn">SEE THE FULL PRICE TABLE </a>
+                        </p>
+                        <?php } ?>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div class="toggle text-center ">
+        <h1>
+            <?php the_title() ?>
+        </h1>
+        <div class="thinLine"></div>
+        <?php echo theme('content'); ?>
+
+    </div>
+
 </div>
 
-<!-- end of single internal -->
-<!-- fixed blocks -->
-<div class="prehung-vid">
+</div>
+</div>
+</div>
+<!-- ================== 
+end of doors section
+===================== -->
+<!-- ================== 
+start of prehung video section
+===================== -->
+<div class="prehung-vid  section" id="slide-2" name="slide-2">
 
     <div class="row">
         <div class="small-12 large-12 columns">
             <h1 class="text-center">
-                        <?php echo theme('video_title'); ?>
+                <?php echo theme('video_title'); ?>
             </h1>
             <div class="thinLine"></div>
-                    <div class="prehung-vid_content" >
-                        <?php echo theme('video_text'); ?>
+            <div class="prehung-vid_content">
+                <?php echo theme('video_text'); ?>
+            </div>
+
+            <div class="vid-wrapper">
+                <div class="prehung-vid_vid">
+                    <?php echo theme('video_link'); ?>
+                    <div class="icon">
+                        <img src="<?php echo get_template_directory_uri()?>/assets/images/video.png" alt="">
                     </div>
-                    <div class="prehung-vid_vid">
-                        <?php echo theme('video_link'); ?>
-                       <div class="icon">
-                            <img src="<?php echo get_template_directory_uri()?>/assets/images/video.png" alt="">
-                        </div>
-                   </div>           
+                </div>
+            </div>
         </div>
     </div>
-    
-        
+
 </div>
-<div class="clearfix"></div> 
- <div class="config">
-            <h1 class="text-center">
-                <?php echo theme('configuration_title'); ?>
-            </h1>
-            <div class="thinLine"></div>
-            <div class="config_content text-center">
-                <?php echo theme('configuration_text'); ?>
-            </div>
-            <div class="config_rep">
-                <?php 
+<!-- ================== 
+end of  prehung video section
+===================== -->
+<!-- ================== 
+start of config section
+===================== -->
+
+<div class="config  section" id="slide-3" name="slide-3">
+    <div class="max-container">
+        <h1 class="text-center">
+            <?php echo theme('configuration_title'); ?>
+        </h1>
+        <div class="thinLine"></div>
+        <div class="config_content text-center">
+            <?php echo theme('configuration_text'); ?>
+        </div>
+        <div class="config_rep">
+            <?php 
                 $rows = theme('configuration_content');
                 if($rows) :
                     foreach($rows as $row ):
                 ?>
-                <div class "config_slider">
-                    <div class="row">
-                        <div class="small-6 large-6 columns">
-                            <div class="slider-img">
-                                <img src="<?php echo $row['content_image']['url']; ?>" alt="">
-                            </div>
+            <div class "config_slider">
+                <div class="row">
+                    <div class="small-6 large-6 columns">
+                        <div class="slider-img">
+                            <img src="<?php echo $row['content_image']['url']; ?>" alt="">
                         </div>
-                        <div class="small-6 large-6 columns">
-                            <div class="config_slider_content">
-                                <h1>
-                                    <?php echo $row['content_title'] ?>
-                                </h1>
-                                <?php echo $row['content_text']; ?>
-                            </div>
+                    </div>
+                    <div class="small-6 large-6 columns">
+                        <div class="config_slider_content">
+                            <h1 class="config_slider_title">
+                                <?php echo $row['content_title'] ?>
+                            </h1>
+                            <?php echo $row['content_text']; ?>
+                        </div>
 
-                        </div>
                     </div>
                 </div>
-
-                <?php endforeach; endif; ?>
             </div>
 
- </div>
-                    </div>
-<div class="clearfix"></div> 
-             
- <div class="handles">
-           
+            <?php endforeach; endif; ?>
+        </div>
+    </div>
+</div>
+<!-- ================== 
+end of  config section
+===================== -->
+<!-- ================== 
+start of handles section
+===================== -->
+
+<div class="handles  section" id="slide-4" name="slide-4">
+
     <h1 class="text-center">
-                        <?php echo theme('handle_title'); ?>
+        <?php echo theme('handle_title'); ?>
     </h1>
-   <div class="thinLine"></div>
-     <div class="handles_img">
-                        <?php
+    <div class="thinLine"></div>
+    <div class="handles_img">
+        <?php
                                 $images = theme('handle_gallery');
                                 if($images):
                                     foreach($images as $image):
                                                                    
                             ?>
-                            <div>
-                                <img src="<?php echo $image['url']; ?>" alt="">
-                            </div>
-                            <?php endforeach; endif; ?>
- </div>
-     
-<!-- end of fixed blocks -->
-<div class="clear"></div>
-<div class="table-sepc" style="background: url(<?php echo get_template_directory_uri() ?>/assets/images/newAssets/Deuren-Table-Spec-Background.png">
+            <div>
+                <img src="<?php echo $image['url']; ?>" alt="">
+            </div>
+            <?php endforeach; endif; ?>
+    </div>
+</div>
+
+<!-- ================== 
+end of  handles section
+===================== -->
+<!-- ================== 
+start of table-spec section
+===================== -->
+
+<div class="table-sepc  section" id="slide-5" name="slide-5" style="background: url(<?php echo get_template_directory_uri() ?>/assets/images/newAssets/Deuren-Table-Spec-Background.png">
     <div class="max-container">
         <div class="table-spec_title">
-            <h1 class="text-center"><?php echo $term_style_name;  ?> SPECIFICATION</h1>
+            <h1 class="text-center">
+                <?php echo $term_style_name;  ?> SPECIFICATION</h1>
             <div class="thinLine"></div>
         </div>
-        <div >
+        <div>
             <?php echo theme('specification_table') ?>
         </div>
 
     </div>
 
 </div>
+<!-- ================== 
+end of  table-spec section
+===================== -->
+<!-- ================== 
+start of fixed sections 
+===================== -->
+
 <nav class="dot-nav">
     <ul>
-        <li class="animate"><a href="#slide-1" class="slide-1-nav active">Slide 1</a></li>
-        <li class="animate"><a href="#slide-2" class="slide-2-nav">Slide 2</a></li>
-        <li class="animate"><a href="#slide-3" class="slide-3-nav">Slide 3</a></li>
-        <li class="animate"><a href="#slide-4" class="slide-4-nav">Slide 4</a></li>
+        <li class="animate">
+            <a href="#slide-1" class="slide-1-nav active">Slide 1</a>
+        </li>
+        <li class="animate">
+            <a href="#slide-2" class="slide-2-nav">Slide 2</a>
+        </li>
+        <li class="animate">
+            <a href="#slide-3" class="slide-3-nav">Slide 3</a>
+        </li>
+        <li class="animate">
+            <a href="#slide-4" class="slide-4-nav">Slide 4</a>
+        </li>
+        <li class="animate">
+            <a href="#slide-5" class="slide-5-nav">Slide 5</a>
+        </li>
+
     </ul>
 </nav>
-		
-<?php get_footer(); ?>
+<div class="priceGuideContent" id="content-price" style="display: none;">
+   
+        <?php echo theme('price_table_header') ?>
+
+</div>
+<div class="get-quote">
+    <a href="<?php echo site_url().'/request-a-quote' ?>">
+        <h4>Get a Quote</h4>
+    </a>
+</div><?php get_footer(); ?>

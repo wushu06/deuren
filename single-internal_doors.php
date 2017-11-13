@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<!-- single internla doors -->
 <?php 
 
  $terms_s = get_terms( 'woods', array( 'hide_empty' => true, 'orderby' => 'slug', 'order' => 'ASC' ));
@@ -30,7 +30,9 @@ $filtered_words = array(
 
 ?>
 
-<!-- start of internal -->
+<!-- ================== 
+start of doors section
+===================== -->
 <div class="single-internal  section" id="slide-1" name="slide-1">
     <div class="container">
         <div class="max-container">
@@ -262,10 +264,12 @@ $filtered_words = array(
 
                             </div>
                             <div class="price ">
-                                    <?php if(theme('price') !==''){ ?>
-                                        <?php echo theme('price') ?>
-                                        <p><a href="#content-price" class="fancybox-price explore-btn">SEE THE FULL PRICE TABLE </a></p>
-                                    <?php } ?>    
+                                <?php if(theme('price') !==''){ ?>
+                                <?php echo theme('price') ?>
+                                <p>
+                                    <a href="#content-price" class="fancybox-price explore-btn">SEE THE FULL PRICE TABLE </a>
+                                </p>
+                                <?php } ?>
 
                             </div>
                         </div>
@@ -288,9 +292,12 @@ $filtered_words = array(
 </div>
 </div>
 
-<!-- end of single internal -->
-<!-- end of single internal -->
-<!-- fixed blocks -->
+<!-- ================== 
+end of doors section
+===================== -->
+<!-- ================== 
+start of prehung video section
+===================== -->
 <div class="prehung-vid  section" id="slide-2" name="slide-2">
 
     <div class="row">
@@ -315,6 +322,12 @@ $filtered_words = array(
     </div>
 
 </div>
+<!-- ================== 
+end of  prehung video section
+===================== -->
+<!-- ================== 
+start of config section
+===================== -->
 
 <div class="config  section" id="slide-3" name="slide-3">
     <div class="max-container">
@@ -354,6 +367,12 @@ $filtered_words = array(
         </div>
     </div>
 </div>
+<!-- ================== 
+end of  config section
+===================== -->
+<!-- ================== 
+start of handles section
+===================== -->
 
 <div class="handles  section" id="slide-4" name="slide-4">
 
@@ -375,7 +394,12 @@ $filtered_words = array(
     </div>
 </div>
 
-<!-- end of fixed blocks -->
+<!-- ================== 
+end of  handles section
+===================== -->
+<!-- ================== 
+start of table-spec section
+===================== -->
 
 <div class="table-sepc  section" id="slide-5" name="slide-5" style="background: url(<?php echo get_template_directory_uri() ?>/assets/images/newAssets/Deuren-Table-Spec-Background.png">
     <div class="max-container">
@@ -391,6 +415,12 @@ $filtered_words = array(
     </div>
 
 </div>
+<!-- ================== 
+end of  table-spec section
+===================== -->
+<!-- ================== 
+start of fixed sections 
+===================== -->
 
 <nav class="dot-nav">
     <ul>
@@ -413,8 +443,8 @@ $filtered_words = array(
     </ul>
 </nav>
 <div class="priceGuideContent" id="content-price" style="display: none;">
-   
-        <?php echo theme('price_table_header') ?>
+
+    <?php echo theme('price_table_header') ?>
 
 </div>
 <div class="get-quote">

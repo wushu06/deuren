@@ -928,6 +928,32 @@ a.dropdown-toggle {
     
 }
 */
+.addContent {
+    position: relative;
+    &:before, &:after{
+        content: "";
+        background: $brown;
+        width: 12px;
+        height: 2px;
+        
+        position: absolute;
+        
+    }
+    &:before {
+        top: -7px;
+        left: 40%;
+    }
+    &:after {
+        bottom: 10px;
+        left: 40%;
+    }
+    .dropdown-menu {
+        top: 31px;
+    }
+    /*a {
+        color: $brown !important;
+    }*/
+}
 @media (min-width: 768px) {
     .nav-tabs-justified> {
         li>a {
@@ -1274,7 +1300,7 @@ a.dropdown-toggle {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
     min-height: 365px;
-    width: 100%;
+    
 }
 
 .navbar-fixed-bottom .navbar-nav>li>.dropdown-menu {
@@ -2216,9 +2242,12 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
     position: relative;
     padding: 3px 10px;
     width: 33%;
-    margin-top: 20px;
+    margin: 20px auto;
 }
-
+.dropdown-menu .dropdown-submenu:last-child {
+    margin-right: 50px
+    
+  }
 .dropdown-menu .dropdown-submenu .dropdown-menu {
     right: 0 !important;
     width: 100%;
@@ -3046,6 +3075,7 @@ header#header .top-cart {
         color: #fff;
         text-align: center;
         margin-top: 30px;
+        text-transform: uppercase;
     }
   
 }
@@ -3373,5 +3403,29 @@ iframe button {
 .quote {
     h1 {
         color: #fff !important;
+    }
+}
+.arch-table {
+    table {
+        tr, td {
+            border: 1px solid #C8C7C7;
+            padding: 10px;
+        }
+         td,  th {
+            padding: 9px 10px;
+            text-align: left;
+        }
+        td {
+            color: #231F20;
+            background-color: #FAFAFA;
+        }
+        th {
+            font-weight: bold;
+            background-color: #000000;
+            color: #ffffff;
+            padding: 10px;
+            text-transform: uppercase;
+            font-size: 1.33em;
+        }
     }
 }

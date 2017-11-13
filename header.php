@@ -106,10 +106,4 @@
 										 ?>
 		</nav>
 	<div class="clear"></div>
-	<div class="fullWidthStrip">
-		<div class="container_12 top-container">
-			<div class="grid_12">
-				<p>all internal doors available in pocket, hinged or sliding configurations. any finish. Any colour.</p>
-			</div>
-		</div>
-	</div>	<section class="wrapper">
+		<section class="wrapper">

@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-
 <div class="breadcrumbs-wrapper">
     <div class="container_12">
         <div class="grid_12">
@@ -19,7 +18,6 @@
             </nav>
         </div>
         <div class="clear"></div>
-
 
     </div>
 </div>
@@ -72,13 +70,13 @@
                                                     </span>
                                                     <span class="sub-info">
                                                         <?php if(theme("url")){ ?>
-                                                            <a href='<?php echo site_url().theme("url");?>'>
-                                                                <?php echo theme('widget_text'); ?>
-                                                            </a>
+                                                        <a href='<?php echo site_url().theme("url");?>'>
+                                                            <?php echo theme('widget_text'); ?>
+                                                        </a>
                                                         <?php }else { ?>
-                                                                <?php echo theme('widget_text'); ?>
+                                                        <?php echo theme('widget_text'); ?>
                                                         <?php } ?>
-                                                        </span>
+                                                    </span>
                                                 </li>
                                                 <?php $i++;endwhile;endif;?>
                                         </ul>
@@ -107,8 +105,7 @@
                                 <div class="small-6 medium-4 columns fs-slide">
                                     <div class="fss-wrapper">
                                         <div class="fs-image">
-                                            <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'inspiration-preview' ); ?>"
-                                                title="<?php echo esc_attr( get_the_title() ); ?>" />
+                                            <img src="<?php echo get_the_post_thumbnail_url( get_the_ID() ); ?>" title="<?php echo esc_attr( get_the_title() ); ?>" />
                                         </div>
                                         <div class="image-overlay">
                                             <div class="image-overlay-wrapper">
@@ -123,16 +120,10 @@
                                 </div>
                             </a>
 
-
                             <?php } 
                                     }
 
-                               
                               ?>
-
-
-
-
 
                         </div>
                     </div>
@@ -141,13 +132,6 @@
             <div class="clear"></div>
         </div>
     </div>
-
-
-
-
-
-
-
 
 </div>
 <?php get_footer();?>

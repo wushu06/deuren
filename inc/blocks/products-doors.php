@@ -99,20 +99,23 @@ if(is_page('Unique Features')):?>
         </p>
         <p>
           <?php
-      /*   if(is_page('internal-doors')   ){
+        if(is_page('internal-doors')   ){
             $page = 'internal_doors';
+            $url =  site_url().'/internal-doors/styles'; 
          }
           if(is_page('front-doors') ) {
              $page = 'front_doors';
+             $url =  site_url().'/front-doors/styles'; 
          }
 
         if(is_page('garage-doors') ) {
              $page = 'garage_doors';
-         }*/
+            
+         }
                     
                          $args = array(
                           // Only get published posts..
-                          'post_type'   => array('internal_doors'),
+                          'post_type'   => array($page),
                           'post_status' => array('publish'),
                           /*'tax_query' => array(
                             // Only select projects
@@ -131,10 +134,10 @@ if(is_page('Unique Features')):?>
                     
                     while ( $loop->have_posts() ) : $loop->the_post();
                          ?>
-            <?php //var_dump($loop); ?>
+            <?php  if(is_page('garage-doors') ) {  $url = get_permalink();   } ?>
         </p>
         <div class="fs-slide small-12 medium-4 columns">
-          <a href="<?php echo ((strpos($_SERVER['REQUEST_URI'], "internal") !== false) ? site_url().'/internal-doors/styles' : ((strpos($_SERVER['REQUEST_URI'], "front") !== false) ? site_url().'/internal-doors/styles' : get_permalink())); ?>">
+          <a href="<?php echo $url; ?>">
             <div class="fss-wrapper">
               <div class="fs-image">
                 <img src="<?php echo get_the_post_thumbnail_url(); ?>">

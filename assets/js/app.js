@@ -198,6 +198,12 @@ jQuery(document).ready(function($){
 		
 		//add active class to parents li of dropdown submenu 
 		$('.active').parents('.dropdown').addClass('addContent');
+		if($('.navbar-nav').children('li.dropdown').hasClass('active')){
+			$('.active').addClass('addContent');
+		}
+		if($('.navbar-nav').children('.page_item').hasClass('active')){
+			$('.page_item.active').addClass('addContent');
+		}
 
 		//fancybox for prices
 		$('.fancybox-price').fancybox({
