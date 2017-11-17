@@ -28,15 +28,8 @@
 	<?php wp_head();?>
 
 </head>
-<?php $class="";
-	if(is_woocommerce()  ) {
-		$class = "";
-	}else {
-		$class = "home";
-	}
- ?>
 
-<body <?php body_class($class);?>>
+<body <?php body_class();?>>
 
 	<header id="header">
 

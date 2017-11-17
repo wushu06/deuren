@@ -13,6 +13,13 @@ body {
     border-bottom-left-radius: 2em;
     color: #fff;
     font-weight: 600;
+    @media(max-width: 791px){
+        padding: 10px 15px;
+    }
+    @media(max-width: 419px){
+        padding: 9px 3px;
+        font-size: 10px;
+    }
 }
 .explore-btn:hover{
     background: $brown;
@@ -47,6 +54,9 @@ body {
     margin-bottom: 100px;
     .element-item  {
         padding: 5px;
+         img {
+            max-width: 200px;
+          }
     }
 }
 .portfolio-detail-content p, .cms-page-portfolio-detail h2 {
@@ -177,7 +187,9 @@ td {
 /* ================================================================================== END BOOTSTRAP MENU STYLE*/
 
 /* ================================================================================== START  FANCY BOX*/
-
+.mm-panels {
+    color: #fff;
+}
 #lightbox {
     position: absolute;
     left: 0;
@@ -929,6 +941,7 @@ a.dropdown-toggle {
 }
 */
 .addContent {
+    
     position: relative;
     &:before, &:after{
         content: "";
@@ -950,9 +963,9 @@ a.dropdown-toggle {
     .dropdown-menu {
         top: 31px;
     }
-    /*a {
-        color: $brown !important;
-    }*/
+    a:first-of-type {
+       /* color: $brown !important;*/
+    }
 }
 @media (min-width: 768px) {
     .nav-tabs-justified> {
@@ -2811,6 +2824,17 @@ header#header .top-cart {
     .container {
     background: $grey;
    .taxonomy_background {
+      
+       width: 600px;
+       margin: auto;
+       @media (max-width: 600px ){
+        background-size: 326px !important;
+        width: auto;
+       }
+       @media (max-width: 791px ){
+        background-size: 326px !important;
+       
+       }
     .slick-slide img {
        
         width: 800px;
@@ -2819,8 +2843,7 @@ header#header .top-cart {
    }
     .slick-slider {
         padding: 0;
-        margin-bottom: -90px;
-        
+       
     }
     h1,
     p {
@@ -2858,12 +2881,13 @@ header#header .top-cart {
     margin-top: 100px;
     h1, p {
         color: #222 !important;
-        font-size: 48px;
+        
         font-weight: 400;
     }    
     
     h1 {
         margin-bottom: 30px !important;
+        font-size: 48px;
     }
     &_content {
         margin-top: 30px;
@@ -2977,6 +3001,9 @@ header#header .top-cart {
         h1 {
             font-size: 4.5rem;
             position: relative;
+            @media(max-width: 791px){
+                font-size: 3rem;
+            }
           
             &:before {
                 content: "";
@@ -2998,6 +3025,7 @@ header#header .top-cart {
         
           .circle {
             display: inline-block;
+            margin-right: 5px;
              
           }
         
@@ -3007,7 +3035,17 @@ header#header .top-cart {
               }
           }
           .active-term {
-              background: red;
+              position: relative;
+              .overlay-img {
+                  position: absolute;
+                  top:0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  background: $brown;
+                  opacity: 0.7;
+                  border-radius: 50%;   
+              }
           }
          
       }
@@ -3036,11 +3074,15 @@ header#header .top-cart {
 }
 
 .toggle {
-    
+    margin-top: 50px;
         button {
            border: none;
             
         }
+    h1 {
+        
+        font-size: 3rem !important;        
+    }    
    
 }
 .see-range {
@@ -3055,6 +3097,10 @@ header#header .top-cart {
         color: #fff;
         text-align: center;
         margin: 22% 15%;
+        @media(max-width: 791px){
+            margin: 25% 15%;
+            font-size: 12px;
+        }
     }
     span{
         margin-top: 30px;
@@ -3097,6 +3143,7 @@ header#header .top-cart {
         font-size: 3rem !important;
         line-height: 3.5rem !important;
         font-weight: 400 !important;
+        margin-bottom: 20px;
        
     }
    .slick-list {
@@ -3120,12 +3167,15 @@ header#header .top-cart {
     }
     .explore-btn {
         color: #fff;
-    }
-    h1 {
-        margin-bottom: 50px;
-    }
-    &_content {
+        margin: auto;
+        width: 280px;
+        display: block;
+        text-align: center;
         margin-top: 50px;
+    }
+
+    &_content {
+        margin-top: 25px;
         margin-bottom: 50px;
     }
     .vid-wrapper {
@@ -3219,6 +3269,9 @@ iframe button {
     h1 {
         margin-top: 50px;
         color: #fff !important;
+        font-size: 3rem !important;
+        margin-bottom: 20px;
+        text-transform: uppercase;
     }
     .thinLine {
         margin-bottom: 25px;
@@ -3229,8 +3282,12 @@ iframe button {
 */
 .door_styles {
     .container {
-        padding: 0  15%;
+        padding: 0  20%;
+        @media(max-width: 791px ) {
+            padding: 0;
+        }
     }
+   
     background: $grey;
     h1,h2,h3,h4, p {
         color: #474747 !important;
@@ -3272,10 +3329,12 @@ iframe button {
     .right-title, .left-title {
         position:relative;
         font-size: 3.5rem;
+        @media (max-width: 791px){
+            font-size: 2rem;
+        }
     }
     .left-title {
         text-align: right;
-        font-size: 3.5rem;
     }
     .right-title:after, .left-title:after {
         content: "";

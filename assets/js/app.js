@@ -127,6 +127,7 @@ jQuery(document).ready(function ($) {
 	});
 	$('.taxonomy_background').slick({
 		dots: false,
+		arrows: false,
 		autoplay: true,
 		autoplaySpeed:1000,
 		infinite: true,

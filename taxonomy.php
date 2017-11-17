@@ -23,7 +23,7 @@
 <div class="taxonomy">
     <div class="container">
               
-        <div class="taxonomy_background" style="background: url(
+        <div class="taxonomy_background"  >
             <?php
                 if( $thumbnail ) :
                     
@@ -31,10 +31,9 @@
       
               
                
-                echo $image['url']; 
+                echo '<img src="'.$image['url'].' " width="600"> '; 
                
-             endforeach; endif; ?>) no-repeat; background-size: 500px; height: 80vh; background-position: center  "
-            >
+             endforeach; endif; ?>
 
         </div>
 

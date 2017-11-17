@@ -26,7 +26,9 @@ if(strpos($_SERVER['REQUEST_URI'], "front") !== false && is_page('woods')){
 //(strpos($_SERVER['REQUEST_URI'], "internal") !== false && is_page('styles') ) ? $tax_name = 'styles'  : $tax_name = 'style_front_door'  );
 //((strpos($_SERVER['REQUEST_URI'], "internal") !== false && is_page('woods') ) ? $tax_name = 'woods'  : $tax_name = 'woods_front_doors'  );
 //echo $tax_namev;
-$terms = get_the_terms( get_the_ID(), $tax_name);
+//$terms = get_the_terms( get_the_ID(), $tax_name); MISTAKE 
+$terms = get_terms( $tax_name);
+//var_dump($terms);
 if(!empty($terms)){  $i = 0; ?>
 
 <?php 

@@ -54,7 +54,9 @@
 
 
 	
-</div></div>    <div>
+</div>
+</div>  
+  <div>
 </div>
 
 
@@ -70,12 +72,12 @@ jQuery(document).ready(function($) {
 // init Isotope
 var $grid = $('.grid').isotope({
   itemSelector: '.element-item',
-	percentPosition: true,
- 
+	masonry: {
+			columnWidth: '.grid-sizer'
+	}
 
 	
 });
-
 // filter functions
 var filterFns = {
   // show if number is greater than 50
