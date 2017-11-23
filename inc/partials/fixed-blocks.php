@@ -53,12 +53,12 @@ start of config section
                 ?>
             <div class "config_slider">
                 <div class="row">
-                    <div class="small-6 large-6 columns">
+                    <div class="small-12 large-6 columns">
                         <div class="slider-img">
                             <img src="<?php echo $row['content_image']['url']; ?>" alt="">
                         </div>
                     </div>
-                    <div class="small-6 large-6 columns">
+                    <div class="small-12 large-6 columns">
                         <div class="config_slider_content">
                             <h1 class="config_slider_title">
                                 <?php echo $row['content_title'] ?>

@@ -157,6 +157,21 @@ jQuery(document).ready(function ($) {
 			
 	});
 
+
+	    var $word_b = $('.main-title').text().toLocaleLowerCase();
+	    var $word = $word_b.replace(/\s/g, '');
+		$('.circle').each(function(){
+console.log($('[id*='+$word+']'));
+            $('[id*='+$word+']').css({'background' : 'red'});
+        });
+
+
+
+
+
+
+
+
 	// fllow scroll 
 	
 });

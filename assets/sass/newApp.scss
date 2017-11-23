@@ -26,6 +26,9 @@ body {
     color: #222;
     transition: all 0.5s ease 0s;
 }
+.highlight {
+    background: red;
+}
 .text-center {      
     text-align: center;
 }
@@ -2823,13 +2826,19 @@ header#header .top-cart {
 .taxonomy{
     .container {
     background: $grey;
+        .tax-wrapper {
+            height: 100vh;
+            margin-top: 70px;
+        }
    .taxonomy_background {
       
        width: 600px;
        margin: auto;
+       height: auto;
        @media (max-width: 600px ){
         background-size: 326px !important;
         width: auto;
+           height: 90vh;
        }
        @media (max-width: 791px ){
         background-size: 326px !important;
@@ -2874,6 +2883,12 @@ header#header .top-cart {
         font-weight: 500;
         text-align: center;
     }
+        .cat-circles {
+            @media (max-width: 600px) {
+                margin-top: 50px;
+
+            }
+        }
 }
 }
 .best {
@@ -3002,7 +3017,7 @@ header#header .top-cart {
             font-size: 4.5rem;
             position: relative;
             @media(max-width: 791px){
-                font-size: 3rem;
+                font-size: 2rem;
             }
           
             &:before {
@@ -3026,6 +3041,7 @@ header#header .top-cart {
           .circle {
             display: inline-block;
             margin-right: 5px;
+            margin-bottom: 5px;
              
           }
         
@@ -3080,8 +3096,11 @@ header#header .top-cart {
             
         }
     h1 {
-        
-        font-size: 3rem !important;        
+        font-weight: 400 !important;
+        font-size: 3rem !important;   
+        @media(max-width: 791px){
+            font-size: 2rem !important;   
+        }     
     }    
    
 }
@@ -3144,6 +3163,9 @@ header#header .top-cart {
         line-height: 3.5rem !important;
         font-weight: 400 !important;
         margin-bottom: 20px;
+        @media(max-width: 791px){
+            font-size: 2rem !important;   
+        }
        
     }
    .slick-list {
@@ -3152,9 +3174,18 @@ header#header .top-cart {
    } 
     .slick-prev {
         left: -45px; 
+        @media(max-width: 961px){
+            left: -8px; 
+            top: 40%;  
+        }
+        
     }
     .slick-next {
         right: -45px;
+        @media(max-width: 961px){
+            right: -8px; 
+            top: 40%;  
+        }
     } 
 
 }
@@ -3244,6 +3275,10 @@ iframe button {
     }
     &_slider_content {
         margin-top: 20%;
+        @media (max-width: 961px) {
+            margin-top: 0;
+            overflow: hidden;
+         }
         h1 {
             margin-bottom: 50px !important;
         }
@@ -3251,12 +3286,20 @@ iframe button {
     .slider-img {
         img {
             float: right;
+            @media (max-width: 961px) {
+               float: none;
+               max-width: 400px;
+               margin: auto;
+               width: 100%;
+            }
         }
         
     }
 }
 .handles {
-
+    @media (max-width: 961px) {
+        margin-top: 300px;
+    }
     &_img {
         margin: 100px 75px;
         padding: 0;
@@ -3378,6 +3421,7 @@ iframe button {
     margin-bottom: 50px;
     .right {
         text-align: right;
+        clear: both;
     }
    
     h6 {
@@ -3401,7 +3445,7 @@ iframe button {
     }
 }
 /* download brochure form */ 
-#gform_3, #gform_4 {
+#gform_3, #gform_4, #gform_5{
     max-width: 510px;
     li {
         margin: 0 0 9px;

@@ -44,7 +44,7 @@ start of doors section
                         </div>
                         <div class="small-12 large-6  columns">
                             <p class="small-title">INTERNAL Door</p>
-                            <h1>
+                            <h1 class="main-title">
                                 <?php echo $term_style_name.'<br> '.$term_wood_name;  ?>
                             </h1>
                             <div class="parag">
@@ -70,20 +70,20 @@ start of doors section
                                         ),
                                         'tax_query' => array(
                                         
-                                         'relation' => 'AND',
+                                        // 'relation' => 'AND',
                                             array(
                                                 'taxonomy' => 'styles',
                                                 'field'    => 'slug',
                                                 'terms'    => array( $term_style_name ),
                                                 
                                             ),
-                                         array(
+                                        /* array(
                                                 'taxonomy' => 'woods',
                                                 'field'    => 'slug',
                                                 'terms'    => array( $term_wood_name ),
                                                 'operator' => 'NOT IN',
                                                 
-                                            ),
+                                            ),*/
                                         ),
                                     
                                 );
@@ -119,20 +119,21 @@ start of doors section
                                 //var_dump( $query);
                                 
                                 while ( $query->have_posts() ) {
-                                    $query->the_post();  
+                                    $query->the_post();
                                     $terms_styles = wp_get_post_terms($post->ID, 'styles', array("fields" => "all"));
-                                    
-                                    foreach ($terms_styles as $term_style) { 
-                                    
-                                        $image = theme('wood_image'); 
+
+                                    foreach ($terms_styles as $term_style) {
+
+                                        $image = theme('wood_image');
                                         if($image){
-                                            echo '<div class="circle styles"><a href="'.get_permalink().'"  data-toggle="tooltip" title="'.theme("woods_title").' "> ';
+                                            echo '<div class="circle styles" id="'.theme("woods_title").'"><a href="'.get_permalink().'"  data-toggle="tooltip" title="'.theme("woods_title").' "> ';
+                                            echo $term_style->name;
                                             echo "<img src='". $image['url']."' width='40' height='40'>";
                                             echo '</a></div>';
                                         }
-                                        
+
                                     }
-                                  
+
                                     ?>
 
                                             <?php } 
@@ -147,9 +148,10 @@ start of doors section
                                         // echo  theme("woods_title").' | <br>';
                                         $image = theme('wood_image'); 
                                             if($image){
-                                                echo '<div class="circle styles active-term"><a href="'.get_permalink().'"  data-toggle="tooltip" title="'.theme("woods_title").' "> ';
+                                                /*echo '<div class="circle styles active-term"><a href="'.get_permalink().'"  data-toggle="tooltip" title="'.theme("woods_title").' "> ';
+                                                echo $term_style_v2->name;
                                                   echo "<img src='". $image['url'] ."' width='40' height='40'>";
-                                                echo '</a><div class="overlay-img"></div></div>';
+                                                echo '</a><div class="overlay-img"></div></div>';*/
                                             }
                                         }
                                       
@@ -240,7 +242,7 @@ start of doors section
                                     $image = theme('styles_image'); 
                                     if($image){
                                         echo '<div class="circle woods"><a href="'.get_permalink().'"  data-toggle="tooltip" title="'.theme("styles_title").' "> ';
-                                      
+                                        echo $term_wood->name;
                                         echo "<img src='". $image['url']."' width='40' height='40'>";
                                         echo '</a></div>';
                                     }

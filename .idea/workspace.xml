@@ -2,41 +2,159 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62f11b9a-9c88-44ac-a920-0387e5cf0855" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/images/default/Deuren-Logo.png" afterPath="$PROJECT_DIR$/assets/images/default/Deuren-Logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/app.css" afterPath="$PROJECT_DIR$/assets/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/clnews/style.css" afterPath="$PROJECT_DIR$/assets/css/clnews/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/commercelab/treeview/jquery.treeview.css" afterPath="$PROJECT_DIR$/assets/css/commercelab/treeview/jquery.treeview.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/oldstyle.css" afterPath="$PROJECT_DIR$/assets/css/oldstyle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/responsive-tables.css" afterPath="$PROJECT_DIR$/assets/css/responsive-tables.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/styles.css" afterPath="$PROJECT_DIR$/assets/css/styles.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/app.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/clnews/images/i-tags.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/clnews/images/i_attached.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/clnews/images/i_print.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/clnews/images/rss.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/clnews/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/commercelab/treeview/images/file.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/commercelab/treeview/images/folder-closed.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/commercelab/treeview/images/folder.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/commercelab/treeview/images/minus.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/commercelab/treeview/images/plus.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/commercelab/treeview/images/treeview-black-line.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/commercelab/treeview/images/treeview-black.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/commercelab/treeview/images/treeview-default-line.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/commercelab/treeview/images/treeview-default.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/commercelab/treeview/images/treeview-famfamfam-line.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/commercelab/treeview/images/treeview-famfamfam.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/commercelab/treeview/images/treeview-gray-line.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/commercelab/treeview/images/treeview-gray.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/commercelab/treeview/images/treeview-red-line.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/commercelab/treeview/images/treeview-red.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/commercelab/treeview/jquery.treeview.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/easylightbox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/foundation.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/grid_1008.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/grid_1280.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/grid_768.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/oldstyle.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/print.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/responsive-tables.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/skin.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/slick-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/slick.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/styles-ie-8.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/styles-ie-9.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/styles-ie.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/styles.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/cloud-zoom.1.0.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/cloud-zoom.1.0.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/css3-mediaqueries.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/fancybox_settings.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/html5.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/jquery-1.9.0.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/jquery-1.9.1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/jquery.easing.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/jquery.elastislide.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/jquery.fancybox-1.3.4.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/jquery.flexslider-min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/jquery.iosslider.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/jquery.selectbox-0.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/jquery.tweet.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/jquery.ui.totop.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/jquery1.4.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/lightbox-1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/lightbox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/responsive-tables.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/script copy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/script_ie.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/selectivizr-min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/_core.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/_framework.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/_var.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/config.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/content/_category.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/content/_home.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/core/_common.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/core/_form.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/core/_reset.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/core/_table.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/email-inline.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/email-non-inline.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/function/_black.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/function/_white.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/layout/_footer.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/layout/_global.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/layout/_header-account.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/layout/_header-cart.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/layout/_header-nav.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/layout/_header-search.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/layout/_header.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/madisonisland-ie8.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/madisonisland.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/mixin/_breakpoint.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/mixin/_clearfix.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/mixin/_if-resolution.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/mixin/_image-replacement.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/mixin/_loading-overlay.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/mixin/_menu.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/mixin/_not-selectable.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/mixin/_toggle-content.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/mixin/_triangle.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/mixin/_typography.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_account-orders.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_account-reviews.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_billing-agreements.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_captcha.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_catalog-compare.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_catalog-msrp.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_catalog-product.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_checkout-cart-minicart.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_checkout-cart.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_checkout-multi-address.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_checkout-onepage.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_checkout-success.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_cms.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_configurableswatches.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_contacts.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_cookies.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_customer.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_paypal.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_popular-terms.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_pricing_conditions.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_product-list.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_recurring-profiles.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_review.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_search.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_slideshow.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_tags.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_widget.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/module/_wishlist.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/override/_plugin.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/scaffold-forms.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/styles-ie8.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/styles.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/scss/vendor/_normalize.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inc/blocks/_gallery.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inc/blocks/simple-text.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inc/blocks/style.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/single-areas.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/.sass-cache/c574a6cfe7e61cde4400b50c9c88d50d01848692/app.scssc" afterPath="$PROJECT_DIR$/assets/.sass-cache/c574a6cfe7e61cde4400b50c9c88d50d01848692/app.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/.sass-cache/c574a6cfe7e61cde4400b50c9c88d50d01848692/ie.scssc" afterPath="$PROJECT_DIR$/assets/.sass-cache/c574a6cfe7e61cde4400b50c9c88d50d01848692/ie.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/.sass-cache/c574a6cfe7e61cde4400b50c9c88d50d01848692/newApp.scssc" afterPath="$PROJECT_DIR$/assets/.sass-cache/c574a6cfe7e61cde4400b50c9c88d50d01848692/newApp.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/.sass-cache/c574a6cfe7e61cde4400b50c9c88d50d01848692/print.scssc" afterPath="$PROJECT_DIR$/assets/.sass-cache/c574a6cfe7e61cde4400b50c9c88d50d01848692/print.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/.sass-cache/c574a6cfe7e61cde4400b50c9c88d50d01848692/screen.scssc" afterPath="$PROJECT_DIR$/assets/.sass-cache/c574a6cfe7e61cde4400b50c9c88d50d01848692/screen.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/app.js" afterPath="$PROJECT_DIR$/assets/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/jquery-1.9.0.min.js" afterPath="$PROJECT_DIR$/assets/js/jquery-1.9.0.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/jquery.viewportchecker.js" afterPath="$PROJECT_DIR$/assets/js/jquery.viewportchecker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/script.js" afterPath="$PROJECT_DIR$/assets/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer.php" afterPath="$PROJECT_DIR$/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/sass/app.scss" afterPath="$PROJECT_DIR$/assets/sass/app.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/sass/newApp.scss" afterPath="$PROJECT_DIR$/assets/sass/newApp.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/stylesheets/app.css" afterPath="$PROJECT_DIR$/assets/stylesheets/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/stylesheets/newApp.css" afterPath="$PROJECT_DIR$/assets/stylesheets/newApp.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/stylesheets/screen.css" afterPath="$PROJECT_DIR$/assets/stylesheets/screen.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/acf/config.php" afterPath="$PROJECT_DIR$/inc/acf/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/blocks/any-woods.php" afterPath="$PROJECT_DIR$/inc/blocks/any-woods.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/blocks/featured.php" afterPath="$PROJECT_DIR$/inc/blocks/featured.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/blocks/fixed-block.php" afterPath="$PROJECT_DIR$/inc/blocks/fixed-block.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/blocks/half-width.php" afterPath="$PROJECT_DIR$/inc/blocks/half-width.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/blocks/doors.php" afterPath="$PROJECT_DIR$/inc/blocks/doors.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/blocks/form-layout.php" afterPath="$PROJECT_DIR$/inc/blocks/form-layout.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/blocks/products-doors.php" afterPath="$PROJECT_DIR$/inc/blocks/products-doors.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/helpers/woocommerce-function.php" afterPath="$PROJECT_DIR$/inc/helpers/woocommerce-function.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page-case-studies.php" afterPath="$PROJECT_DIR$/page-case-studies.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page.php" afterPath="$PROJECT_DIR$/page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/single-case_studies.php" afterPath="$PROJECT_DIR$/single-case_studies.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/single.php" afterPath="$PROJECT_DIR$/single.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/woocommerce/archive-product.php" afterPath="$PROJECT_DIR$/woocommerce/archive-product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/woocommerce/content-product.php" afterPath="$PROJECT_DIR$/woocommerce/content-product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/woocommerce/global/sidebar.php" afterPath="$PROJECT_DIR$/woocommerce/global/sidebar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/woocommerce/loop/loop-end.php" afterPath="$PROJECT_DIR$/woocommerce/loop/loop-end.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/woocommerce/loop/loop-start.php" afterPath="$PROJECT_DIR$/woocommerce/loop/loop-start.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/woocommerce/loop/orderby.php" afterPath="$PROJECT_DIR$/woocommerce/loop/orderby.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/woocommerce/loop/pagination.php" afterPath="$PROJECT_DIR$/woocommerce/loop/pagination.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-bootstrap-navwalker.php" afterPath="$PROJECT_DIR$/wp-bootstrap-navwalker.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/partials/fixed-blocks.php" afterPath="$PROJECT_DIR$/inc/partials/fixed-blocks.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/single-internal_doors.php" afterPath="$PROJECT_DIR$/single-internal_doors.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taxonomy.php" afterPath="$PROJECT_DIR$/taxonomy.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,22 +163,57 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="oldstyle.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/css/oldstyle.css">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="newApp.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/sass/newApp.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="13054" column="9" lean-forward="false" selection-start-line="13054" selection-start-column="9" selection-end-line="13054" selection-end-column="9" />
+            <state relative-caret-position="435">
+              <caret line="29" column="20" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="single-internal_doors.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/single-internal_doors.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="409">
+              <caret line="128" column="104" lean-forward="false" selection-start-line="128" selection-start-column="104" selection-end-line="128" selection-end-column="104" />
               <folding>
-                <marker date="1507194697000" expanded="true" signature="268588:269166" ph="/*...*/" />
+                <marker date="1511438309000" expanded="true" signature="8918:9053" ph="..." />
+                <marker date="1511438309000" expanded="true" signature="14810:14855" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="163" column="34" lean-forward="false" selection-start-line="163" selection-start-column="34" selection-end-line="163" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="taxonomy.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taxonomy.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="56" column="40" lean-forward="false" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>tax</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -69,6 +222,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/assets/css/oldstyle.css" />
+        <option value="$PROJECT_DIR$/taxonomy.php" />
+        <option value="$PROJECT_DIR$/assets/sass/newApp.scss" />
+        <option value="$PROJECT_DIR$/single-internal_doors.php" />
+        <option value="$PROJECT_DIR$/assets/js/app.js" />
       </list>
     </option>
   </component>
@@ -79,11 +236,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="202" />
-    <option name="y" value="47" />
-    <option name="width" value="1450" />
-    <option name="height" value="965" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="2560" />
+    <option name="height" value="1440" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -101,54 +256,41 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="deuren" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="deuren" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="deuren" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="deuren" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="deuren" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="deuren" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="deuren" type="b2602c69:ProjectViewProjectNode" />
+              <item name="deuren" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="deuren" type="b2602c69:ProjectViewProjectNode" />
+              <item name="deuren" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="deuren" type="b2602c69:ProjectViewProjectNode" />
+              <item name="deuren" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="deuren" type="b2602c69:ProjectViewProjectNode" />
+              <item name="deuren" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sass" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="deuren" type="b2602c69:ProjectViewProjectNode" />
+              <item name="deuren" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="inc" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -179,37 +321,40 @@
       <option name="presentableId" value="Default" />
       <updated>1507194294814</updated>
       <workItem from="1507194297805" duration="285000" />
+      <workItem from="1511345774481" duration="175000" />
+      <workItem from="1511432963533" duration="366000" />
+      <workItem from="1511433431181" duration="5560000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="285000" />
+    <option name="totallyTimeSpent" value="6386000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="202" y="47" width="1450" height="965" extended-state="0" />
+    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22344828" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22875299" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17556694" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -219,13 +364,55 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/css/oldstyle.css">
+    <entry file="file://$PROJECT_DIR$/assets/sass/newApp.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="13054" column="9" lean-forward="false" selection-start-line="13054" selection-start-column="9" selection-end-line="13054" selection-end-column="9" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taxonomy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/oldstyle.css" />
+    <entry file="file://$PROJECT_DIR$/assets/sass/newApp.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="20" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taxonomy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="56" column="40" lean-forward="false" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/single-internal_doors.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="128" column="104" lean-forward="false" selection-start-line="128" selection-start-column="104" selection-end-line="128" selection-end-column="104" />
           <folding>
-            <marker date="1507194697000" expanded="true" signature="268588:269166" ph="/*...*/" />
+            <marker date="1511438309000" expanded="true" signature="8918:9053" ph="..." />
+            <marker date="1511438309000" expanded="true" signature="14810:14855" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="163" column="34" lean-forward="false" selection-start-line="163" selection-start-column="34" selection-end-line="163" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>

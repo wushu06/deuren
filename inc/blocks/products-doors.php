@@ -140,7 +140,7 @@ if(is_page('Unique Features')):?>
           <a href="<?php echo $url; ?>">
             <div class="fss-wrapper">
               <div class="fs-image">
-                <img src="<?php echo get_the_post_thumbnail_url(); ?>">
+                <img src="<?php echo theme('background')['url']?>">
 
               </div>
               <div class="image-overlay">

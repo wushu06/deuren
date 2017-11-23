@@ -22,38 +22,39 @@
 
 <div class="taxonomy">
     <div class="container">
-              
-        <div class="taxonomy_background"  >
-            <?php
-                if( $thumbnail ) :
-                    
-                    foreach ( $thumbnail as $image ):
-      
-              
-               
-                echo '<img src="'.$image['url'].' " width="600"> '; 
-               
-             endforeach; endif; ?>
+         <div class="tax-wrapper">
+            <div class="taxonomy_background"  >
+                <?php
+                    if( $thumbnail ) :
 
-        </div>
-
-        <div class="row">
-            <div class="small-12 large-12 columns">
-                <div class="taxonomy_content">
-                    <h1 class="text-center"> <?php echo $term_name;?></h1>
-                    <div class="thinLine text-center"></div>
-                </div>
-                <div class="taxonomy_desc">
-                    <?php echo $term_description;?>
-                </div>
-               
-             </div>
-
-        </div>
+                        foreach ( $thumbnail as $image ):
 
 
 
-        <div class="cat-circles">
+                    echo '<img src="'.$image['url'].' " width="600"> ';
+
+                 endforeach; endif; ?>
+
+            </div>
+
+            <div class="row">
+                <div class="small-12 large-12 columns">
+                    <div class="taxonomy_content">
+                        <h1 class="text-center"> <?php echo $term_name;?></h1>
+                        <div class="thinLine text-center"></div>
+                    </div>
+                    <div class="taxonomy_desc">
+                        <?php echo $term_description;?>
+                    </div>
+
+                 </div>
+
+            </div>
+         </div>
+
+
+
+        <div class="cat-circles clearfix">
 
             <?php
             $args = array(
